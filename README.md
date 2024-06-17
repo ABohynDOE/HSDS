@@ -1,8 +1,8 @@
 # HSDS <img src="man/figures/logo.svg" align="right" height="139"/>
 
-The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the data sets of the book ["A Handbook of Small Data Sets"](https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667) (1994) of David J. Hand. These data sets are particularly useful to demonstrate examples of function or statistical tests, but also to teach about statistics and R.
+The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the data sets of the book ["A Handbook of Small Data Sets"](https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667) (1994) of David J. Hand available. These data sets are particularly useful to demonstrate examples of function or statistical tests, but also to teach about statistics and R.
 
-All data sets are already available individually at this repo: <https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master>. However, they are not immediately usable in R, and undocumented. This package aims to solve this issue, and provide cleaned and documented data sets.
+All data sets are already available individually at this repo: <https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master>. However, they are not immediately usable in R, and undocumented. This package aims to solve this issue, and provide clean and documented data sets.
 
 ## Installation
 
@@ -14,7 +14,8 @@ devtools::install_github("ABohynDOE/HSDS")
 
 ## Available data sets
 
-The book contains more than 200 data sets. For the moment, only `r length(list.files("data"))` are available. The table below summarizes the data sets, displaying their names, what they contain, their structure, and the type of variables present.
+The book contains more than 500 data sets. For the moment, only some are available.
+They are summarized in the table below, along with their names, what they contain, their structure, and the type of variables present.
 
 | Name       | Title                                                | Structure      | Variables                    |
 |------------------|------------------|------------------|-------------------|
@@ -25,7 +26,7 @@ The book contains more than 200 data sets. For the moment, only `r length(list.f
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to use a data set to make a nice plot:
 
 ``` r
 library(HSDS)
@@ -38,7 +39,7 @@ ggplot(germin, aes(x = water, y = seeds, color = box)) +
 
 ## Contributing
 
-We are far from the 200 data sets, so any help is welcome ! If you want to contribute, all raw data sets are already present in the repo (at `data-raw/data-files`), so feel free to clean one or more... ! If you do so, please respect the following guidelines:
+We are far from the 500 data sets, so any help is welcome ! If you want to contribute, all raw data sets are already present in the repo (at `data-raw/data-files`), so feel free to clean one or more... ! If you do so, please respect the following guidelines:
 
 -   data sets should be named after the data structure index of the book (available [here](https://github.com/JedStephens/Handbook-of-Small-Data-Sets/blob/master/data_structure_index_HSDS.pdf))
 
