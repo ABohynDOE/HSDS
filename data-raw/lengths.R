@@ -21,6 +21,11 @@ lengths <- readr::read_delim(
   # Add true length
   mutate(
     true_length = ifelse(unit == "metres", 13.1, 43)
+  ) %>%
+  labelled::set_variable_labels(
+    unit = "Measurement unit",
+    guessed_length = "Guessed length",
+    true_length = "True length"
   )
 
 usethis::use_data(lengths, overwrite = TRUE)
