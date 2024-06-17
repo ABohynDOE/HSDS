@@ -16,11 +16,12 @@ devtools::install_github("ABohynDOE/HSDS")
 
 The book contains more than 200 data sets. For the moment, only `r length(list.files("data"))` are available. The table below summarizes the data sets, displaying their names, what they contain, their structure, and the type of variables present.
 
-| Name      | Title                                                | Structure      | Variables                    |
+| Name       | Title                                                | Structure      | Variables                    |
 |------------------|------------------|------------------|-------------------|
-| `germin`  | Germinating seeds                                    | $48 \times 3$  | binary, categorical, numeric |
-| `lengths` | Guessing lengths                                     | $113 \times 3$ | binary, numeric(2)           |
-| `darwin`  | Darwin's cross-fertilized and self-fertilized plants | $30 \times 3$  | numeric(2), binary           |
+| `germin`   | Germinating seeds                                    | $48 \times 3$  | binary, categorical, numeric |
+| `lengths`  | Guessing lengths                                     | $113 \times 3$ | binary, numeric(2)           |
+| `darwin`   | Darwin's cross-fertilized and self-fertilized plants | $30 \times 3$  | numeric(2), binary           |
+| `interval` | Intervals between cars on the M1 motorway            | $41 \times 2$  | numeric, datetime            |
 
 ## Example
 

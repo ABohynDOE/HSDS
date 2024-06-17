@@ -1,6 +1,4 @@
-#' Guessing lengths
-#'
-#' Data from Darwin's study of cross- and self-fertilization.
+#' Darwin's cross-fertilized and self-fertilized plants
 #'
 #' Pairs of seedlings of the same age, one produced by cross-fertilization and
 #' the other by self-fertilization, were grown together so that the members of
