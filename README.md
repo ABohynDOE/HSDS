@@ -1,6 +1,8 @@
 # HSDS <img src="man/figures/logo.svg" align="right" height="139"/>
 
-The goal of HSDS is to make all the data sets of the book "A Handbook of Small Data Sets" (1994) of David J. Hand. These data sets are particularly useful to demonstrate examples of function or statistical tests, but also to teach about statistics and R.
+The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the data sets of the book ["A Handbook of Small Data Sets"](https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667) (1994) of David J. Hand. These data sets are particularly useful to demonstrate examples of function or statistical tests, but also to teach about statistics and R.
+
+All data sets are already available individually at this repo: <https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master>. However, they are not immediately usable in R, and undocumented. This package aims to solve this issue, and provide cleaned and documented data sets.
 
 ## Installation
 
@@ -14,11 +16,11 @@ devtools::install_github("ABohynDOE/HSDS")
 
 The book contains more than 200 data sets. For the moment, only `r length(list.files("data"))` are available. The table below summarizes the data sets, displaying their names, what they contain, their structure, and the type of variables present.
 
-| Name      | Title             | Structure      | Variables                    |
-|-----------|-------------------|----------------|------------------------------|
-| `germin`  | Germinating seeds | $48 \times 3$  | binary, categorical, numeric |
-| `lengths` | Guessing lengths  | $113 \times 3$ | binary, numeric(2)           |
-|           |                   |                |                              |
+| Name      | Title                                                | Structure      | Variables                    |
+|------------------|------------------|------------------|-------------------|
+| `germin`  | Germinating seeds                                    | $48 \times 3$  | binary, categorical, numeric |
+| `lengths` | Guessing lengths                                     | $113 \times 3$ | binary, numeric(2)           |
+| `darwin`  | Darwin's cross-fertilized and self-fertilized plants | $30 \times 3$  | numeric(2), binary           |
 
 ## Example
 
@@ -32,3 +34,15 @@ ggplot(germin, aes(x = water, y = seeds, color = box)) +
   geom_boxplot(na.rm = T) +
   theme_bw()
 ```
+
+## Contributing
+
+We are far from the 200 data sets, so any help is welcome ! If you want to contribute, all raw data sets are already present in the repo (at `data-raw/data-files`), so feel free to clean one or more... ! If you do so, please respect the following guidelines:
+
+-   data sets should be named after the data structure index of the book (available [here](https://github.com/JedStephens/Handbook-of-Small-Data-Sets/blob/master/data_structure_index_HSDS.pdf))
+
+-   all variables in the data set should be labelled (using the [`labelled`](https://cran.r-project.org/web/packages/labelled/vignettes/intro_labelled.html) package for example)
+
+-   data sets should be documented using the text from the book
+
+-   when you add a data set, modify the current `README` file accordingly
