@@ -1,8 +1,8 @@
 # HSDS <img src="man/figures/logo.svg" align="right" height="139"/>
 
-The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the data sets of the book ["A Handbook of Small Data Sets"](https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667) (1994) of David J. Hand. These data sets are particularly useful to demonstrate examples of function or statistical tests, but also to teach about statistics and R.
+The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the data sets of the book ["A Handbook of Small Data Sets"](https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667) (1994) of David J. Hand available. These data sets are particularly useful to demonstrate examples of function or statistical tests, but also to teach about statistics and R.
 
-All data sets are already available individually at this repo: <https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master>. However, they are not immediately usable in R, and undocumented. This package aims to solve this issue, and provide cleaned and documented data sets.
+All data sets are already available individually at this repo: <https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master>. However, they are not immediately usable in R, and undocumented. This package aims to solve this issue, and provide clean and documented data sets.
 
 ## Installation
 
