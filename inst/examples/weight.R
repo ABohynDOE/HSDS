@@ -1,10 +1,9 @@
 library(hsds)
-library(dplyr)
 library(ggplot2)
 
 # Mean weight gain per diet
 weight %>%
-  summarise(
+  dplyr::summarise(
     mean(weight),
     sd(weight),
     .by = c(source, amount)

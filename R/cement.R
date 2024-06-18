@@ -11,6 +11,9 @@
 #'   \item{time}{Curing time in days}
 #'   \item{strength}{Tensile strength (kg/cm2)}
 #' }
+#'
+#' @example inst/examples/cement.R
+#'
 #' @source {Hald, A. (1952) \emph{Statistical Theory with Engineering
 #'   Applications}, New York: John Wiley & Sons, 451.}
 "cement"
