@@ -4,6 +4,10 @@ The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the data se
 
 All data sets are already available individually at this repo: <https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master>. However, they are not immediately usable in R, and undocumented. This package aims to solve this issue, and provide clean and documented data sets.
 
+Do you like this package and want to support me ? 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/abohyn)
+
+
 ## Installation
 
 You can install the development version of HSDS like so:
