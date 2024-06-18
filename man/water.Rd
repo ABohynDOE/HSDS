@@ -7,7 +7,7 @@
 \format{
 A data frame with 61 rows and 5 columns:
 \describe{
-  \item{town}{Name of the town}
+  \item{town}{Name of the town, as a factor variable}
   \item{mortality}{Mortality rate per 100,000 inhabitants}
   \item{calcium}{Calcium concentration in the drinking water in parts per million (ppm)}
   \item{lon}{Longitude using the EPSG:4326 coordinate system}
