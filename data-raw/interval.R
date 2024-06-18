@@ -12,13 +12,13 @@ raw_interval <- readr::read_delim(
 
 # Slice and stack the data set
 interval <- rbind(
-  as.matrix(raw_interval[,c(1, 2)]),
-  as.matrix(raw_interval[,c(3, 4)]),
-  as.matrix(raw_interval[,c(5, 6)])
+  as.matrix(raw_interval[, c(1, 2)]),
+  as.matrix(raw_interval[, c(3, 4)]),
+  as.matrix(raw_interval[, c(5, 6)])
 ) %>%
   as.data.frame() %>%
   # Add column names and convert "time" to date-time values
-  magrittr::set_colnames(c('car', 'time')) %>%
+  magrittr::set_colnames(c("car", "time")) %>%
   filter(!is.na(car)) %>%
   mutate(
     time_str = str_remove_all(time, "\\s") %>%
@@ -34,10 +34,10 @@ interval <- rbind(
 # Add the times together to have uniform times
 for (i in 1:nrow(interval)) {
   if (interval$hour[i] == 0) {
-    interval$hour[i] <- interval$hour[i-1]
+    interval$hour[i] <- interval$hour[i - 1]
   }
   if (interval$minute[i] == 0) {
-    interval$minute[i] <- interval$minute[i-1]
+    interval$minute[i] <- interval$minute[i - 1]
   }
 }
 

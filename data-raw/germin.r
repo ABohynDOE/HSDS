@@ -5,8 +5,8 @@ library(forcats)
 germin <- readr::read_delim(
   file = here::here("data-raw", "data-files", "germin.dat"),
   col_names = paste0("water_", 1:6),
-  col_types = rep('i', 6)
-  ) %>%
+  col_types = rep("i", 6)
+) %>%
   mutate(
     # Turn missing value into NA
     water_5 = water_5 %>% str_remove_all("\\*") %>% as.numeric(),

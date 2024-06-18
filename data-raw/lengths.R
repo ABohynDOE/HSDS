@@ -2,9 +2,9 @@ library(dplyr)
 
 lengths <- readr::read_delim(
   file = here::here("data-raw", "data-files", "lengths.dat"),
-  delim = '\t',
+  delim = "\t",
   col_names = FALSE,
-  col_types = 'i'
+  col_types = "i"
 ) %>%
   mutate(
     # Length units

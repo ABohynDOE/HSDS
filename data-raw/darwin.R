@@ -4,7 +4,7 @@ darwin <- readr::read_delim(
   file = here::here("data-raw", "data-files", "darwin.dat"),
   delim = "\t",
   col_names = c("pair", "cross", "self"),
-  col_types = rep('i', 3)
+  col_types = rep("i", 3)
 ) %>%
   tidyr::pivot_longer(
     cols = -pair,
