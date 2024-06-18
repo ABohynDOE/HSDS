@@ -27,6 +27,8 @@ The book contains more than 500 data sets. For the moment, only some are availab
 | `tearing`  | Tearing factor for paper                             | $20 \times 2$  | numeric(2)                                  |
 | `abrasion` | Abrasion loss                                        | $30 \times 3$  | numeric(3)                                  |
 | `water`    | Mortality and water hardness                         | $61 \times 5$  | character factor, numeric(2), coordinate(2) |
+| `cement`   | Tensile strength of cement                           | $21 \times 2$  | numeric(2)                                  |
+| `weight`   | Weight gain in rats                                  | $40 \times 3$  | factor(2), numeric                          |
 
 ## Example
 
