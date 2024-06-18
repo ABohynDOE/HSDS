@@ -13,5 +13,5 @@
 #'   \item{car}{Unique ID to define the cars}
 #'   \item{time}{Time at which the car passed the junction. Encoded as a `period` object from the [lubridate] package}
 #' }
-#' @source {Lewis, T. and the M345 Course Team (1986) M345 Statistical Methods, Unit 2: Basic Methods: Testing and Estimation, Milton Keynes: The Open University, 16.}
+#' @source {Lewis, T. and the M345 Course Team (1986) \emph{M345 Statistical Methods, Unit 2: Basic Methods: Testing and Estimation}, Milton Keynes: The Open University, 16.}
 "interval"

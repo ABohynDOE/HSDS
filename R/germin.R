@@ -17,5 +17,5 @@
 #'   \item{water}{Water level in the box, with higher codes corresponding to more water}
 #'   \item{seeds}{Number of germinated seeds, out of 100}
 #' }
-#' @source {Chatfield, C. (1982) Teaching a course in applied statistics, Applied Statistics, 31, 272-89.}
+#' @source {Chatfield, C. (1982) \emph{Teaching a course in applied statistics}, Applied Statistics, 31, 272-89.}
 "germin"

@@ -13,7 +13,7 @@ A data frame with 113 rows and 3 columns:
 }
 }
 \source{
-{Hills, M. and the M345 Course Team (1986) M345 Statistical Methods, Unit 1: Data, distributions and uncertainty, Milton Keynes: The Open University. Tables 2.1 and 2.4.}
+{Hills, M. and the M345 Course Team (1986) \emph{M345 Statistical Methods, Unit 1: Data, distributions and uncertainty}, Milton Keynes: The Open University. Tables 2.1 and 2.4.}
 }
 \usage{
 lengths

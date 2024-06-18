@@ -13,7 +13,7 @@ A data frame with 48 rows and 3 columns:
 }
 }
 \source{
-{Chatfield, C. (1982) Teaching a course in applied statistics, Applied Statistics, 31, 272-89.}
+{Chatfield, C. (1982) \emph{Teaching a course in applied statistics}, Applied Statistics, 31, 272-89.}
 }
 \usage{
 germin

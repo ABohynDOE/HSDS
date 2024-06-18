@@ -12,7 +12,7 @@ A data frame with 48 rows and 3 columns:
 }
 }
 \source{
-{Lewis, T. and the M345 Course Team (1986) M345 Statistical Methods, Unit 2: Basic Methods: Testing and Estimation, Milton Keynes: The Open University, 16.}
+{Lewis, T. and the M345 Course Team (1986) \emph{M345 Statistical Methods, Unit 2: Basic Methods: Testing and Estimation}, Milton Keynes: The Open University, 16.}
 }
 \usage{
 interval

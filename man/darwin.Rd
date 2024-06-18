@@ -13,7 +13,7 @@ A data frame with 30 rows and 3 columns:
 }
 }
 \source{
-{Darwin, C. (1876) The Effect of Cross- and Self-fertilization in the Vegetable Kingdom, 2nd edition, London: John Murray.}
+{Darwin, C. (1876) \emph{The Effect of Cross- and Self-fertilization in the Vegetable Kingdom}, 2nd edition, London: John Murray.}
 }
 \usage{
 darwin

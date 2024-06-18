@@ -14,5 +14,5 @@
 #'   \item{fertilization}{Type of fertilization (`cross` of `self`)}
 #'   \item{height}{Height of the plant in inches}
 #' }
-#' @source {Darwin, C. (1876) The Effect of Cross- and Self-fertilization in the Vegetable Kingdom, 2nd edition, London: John Murray.}
+#' @source {Darwin, C. (1876) \emph{The Effect of Cross- and Self-fertilization in the Vegetable Kingdom}, 2nd edition, London: John Murray.}
 "darwin"
