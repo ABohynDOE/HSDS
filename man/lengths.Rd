@@ -9,7 +9,7 @@ A data frame with 113 rows and 3 columns:
 \describe{
   \item{unit}{Unit used for guessing (feet or metres)}
   \item{guessed_length}{Length guessed by the students}
-  \item{guessed_length}{True length of the room, in corresponding units}
+  \item{true_length}{True length of the room, in corresponding units}
 }
 }
 \source{

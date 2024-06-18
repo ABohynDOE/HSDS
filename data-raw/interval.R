@@ -44,9 +44,7 @@ for (i in 1:nrow(interval)) {
 # Clean the data sets and add variable labels
 interval <- interval %>%
   mutate(
-    time = paste(hour, minute, second, sep = ":") %>%
-      lubridate::hms() %>%
-      as.period(),
+    time = paste(hour, minute, second, sep = ":"),
     .keep = "unused"
   ) %>%
   labelled::set_variable_labels(

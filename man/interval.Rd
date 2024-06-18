@@ -8,7 +8,7 @@
 A data frame with 48 rows and 3 columns:
 \describe{
   \item{car}{Unique ID to define the cars}
-  \item{time}{Time at which the car passed the junction. Encoded as a `period` object from the [lubridate] package}
+  \item{time}{Time at which the car passed the junction. Encoded as a string in the 'HH:MM:SS' format}
 }
 }
 \source{
@@ -26,5 +26,6 @@ The times are recorded on the 24-hour clock to the nearest second.
 \details{
 The data were collected by Professor Toby Lewis as a sample of event times in
 a point process which it may be appropriate to model as a Poisson process.
+They are also ideal to learn to handle time objects in R.
 }
 \keyword{datasets}

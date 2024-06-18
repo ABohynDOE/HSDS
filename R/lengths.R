@@ -13,7 +13,7 @@
 #' \describe{
 #'   \item{unit}{Unit used for guessing (feet or metres)}
 #'   \item{guessed_length}{Length guessed by the students}
-#'   \item{guessed_length}{True length of the room, in corresponding units}
+#'   \item{true_length}{True length of the room, in corresponding units}
 #' }
 #' @source {Hills, M. and the M345 Course Team (1986) \emph{M345 Statistical Methods, Unit 1: Data, distributions and uncertainty}, Milton Keynes: The Open University. Tables 2.1 and 2.4.}
 "lengths"
