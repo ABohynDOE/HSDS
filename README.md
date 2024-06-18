@@ -4,9 +4,7 @@ The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the data se
 
 All data sets are already available individually at this repo: <https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master>. However, they are not immediately usable in R, and undocumented. This package aims to solve this issue, and provide clean and documented data sets.
 
-Do you like this package and want to support me ? 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/abohyn)
-
+Do you like this package and want to support me ? [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/abohyn)
 
 ## Installation
 
@@ -20,14 +18,15 @@ devtools::install_github("ABohynDOE/HSDS")
 
 The book contains more than 500 data sets. For the moment, only some are available. They are summarized in the table below, along with their names, what they contain, their structure, and the type of variables present.
 
-| Name       | Title                                                | Structure      | Variables                    |
+| Name       | Title                                                | Structure      | Variables                                   |
 |------------------|------------------|------------------|-------------------|
-| `germin`   | Germinating seeds                                    | $48 \times 3$  | binary, categorical, numeric |
-| `lengths`  | Guessing lengths                                     | $113 \times 3$ | binary, numeric(2)           |
-| `darwin`   | Darwin's cross-fertilized and self-fertilized plants | $30 \times 3$  | numeric(2), binary           |
-| `interval` | Intervals between cars on the M1 motorway            | $41 \times 2$  | numeric, datetime            |
-| `tearing`  | Tearing factor for paper                             | $20 \times 2$  | numeric(2)                   |
-| `abrasion` | Abrasion loss                                        | $30 \times 3$  | numeric(3)                   |
+| `germin`   | Germinating seeds                                    | $48 \times 3$  | binary, categorical, numeric                |
+| `lengths`  | Guessing lengths                                     | $113 \times 3$ | binary, numeric(2)                          |
+| `darwin`   | Darwin's cross-fertilized and self-fertilized plants | $30 \times 3$  | numeric(2), binary                          |
+| `interval` | Intervals between cars on the M1 motorway            | $41 \times 2$  | numeric, datetime                           |
+| `tearing`  | Tearing factor for paper                             | $20 \times 2$  | numeric(2)                                  |
+| `abrasion` | Abrasion loss                                        | $30 \times 3$  | numeric(3)                                  |
+| `water`    | Mortality and water hardness                         | $61 \times 5$  | character factor, numeric(2), coordinate(2) |
 
 ## Example
 
