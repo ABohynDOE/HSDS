@@ -17,7 +17,6 @@
 #' \describe{
 #'   \item{pressure}{Pressure applied during pressing}
 #'   \item{tear_factor}{Tear factor}
-#'   \item{height}{Height of the plant in inches}
 #' }
 #' @source {Williams, E.J. (1959) \emph{Regression Analysis}, New York: John Wiley & Sons, 17.}
 "tearing"

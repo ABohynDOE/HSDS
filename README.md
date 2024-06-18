@@ -23,6 +23,7 @@ The book contains more than 500 data sets. For the moment, only some are availab
 | `darwin`   | Darwin's cross-fertilized and self-fertilized plants | $30 \times 3$  | numeric(2), binary           |
 | `interval` | Intervals between cars on the M1 motorway            | $41 \times 2$  | numeric, datetime            |
 | `tearing`  | Tearing factor for paper                             | $20 \times 2$  | numeric(2)                   |
+| `abrasion` | Abrasion loss                                        | $30 \times 3$  | numeric(3)                   |
 
 ## Example
 

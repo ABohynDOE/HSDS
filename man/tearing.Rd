@@ -9,7 +9,6 @@ A data frame with 20 rows and 2 columns:
 \describe{
   \item{pressure}{Pressure applied during pressing}
   \item{tear_factor}{Tear factor}
-  \item{height}{Height of the plant in inches}
 }
 }
 \source{
