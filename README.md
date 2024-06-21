@@ -19,7 +19,7 @@ devtools::install_github("ABohynDOE/HSDS")
 The book contains more than 500 data sets. For the moment, only some are available. They are summarized in the table below, along with their names, what they contain, their structure, and the type of variables present.
 
 | Name       | Title                                                | Structure      | Variables                                   |
-|--------------|-------------------------|--------------|--------------------|
+|----------------|----------------------|----------------|------------------|
 | `germin`   | Germinating seeds                                    | $48 \times 3$  | binary, categorical, numeric                |
 | `lengths`  | Guessing lengths                                     | $113 \times 3$ | binary, numeric(2)                          |
 | `darwin`   | Darwin's cross-fertilized and self-fertilized plants | $30 \times 3$  | numeric(2), binary                          |
@@ -31,6 +31,7 @@ The book contains more than 500 data sets. For the moment, only some are availab
 | `weight`   | Weight gain in rats                                  | $40 \times 3$  | factor(2), numeric                          |
 | `chickens` | Weight of chickens                                   | $24 \times 3$  | factor(2), numeric                          |
 | `flicker`  | Flicker frequency                                    | $27 \times 4$  | factor(3), numeric                          |
+| `chloride` | Effect of ammonium chloride on yield                 | $32 \times 5$  | factor(4), numeric                          |
 
 ## Example
 
