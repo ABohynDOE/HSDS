@@ -4,7 +4,7 @@ library(dplyr)
 
 cement <- readr::read_delim(
   file = here::here("data-raw", "data-files", "cement.dat"),
-  col_names = c("time", paste0("strength", 1:5)),,
+  col_names = c("time", paste0("strength", 1:5)),
   col_types = "n"
 ) %>%
   pivot_longer(

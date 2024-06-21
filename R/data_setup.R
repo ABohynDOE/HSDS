@@ -25,7 +25,7 @@ data_setup <- function(data, open = rlang::is_interactive()) {
   data_raw_path <- here::here("data-raw", paste0(data, ".R"))
   if (fs::file_exists(data_raw_path)) {
     cli::cli_abort("File {.path {data_raw_path}} already exists, skipping !")
-  } else{
+  } else {
     # Generate the empty file
     fs::file_create(data_raw_path)
     # Generic code to write to all files
@@ -52,7 +52,7 @@ data_setup <- function(data, open = rlang::is_interactive()) {
   data_doc_path <- here::here("R", paste0(data, ".R"))
   if (fs::file_exists(data_doc_path)) {
     cli::cli_abort("File {.path {data_doc_path}} already exists, skipping !")
-  } else{
+  } else {
     # Generate the empty file
     fs::file_create(data_doc_path)
     # Generic code to write to documentation files
@@ -82,7 +82,7 @@ data_setup <- function(data, open = rlang::is_interactive()) {
   data_example_path <- here::here("inst", "examples", paste0(data, ".R"))
   if (fs::file_exists(data_example_path)) {
     cli::cli_abort("File {.path {data_example_path}} already exists, skipping !")
-  } else{
+  } else {
     fs::file_create(data_example_path)
     # Info message to user
     cli::cli_alert_info("Data example file for '{data}' created at: {.path {data_example_path}}")

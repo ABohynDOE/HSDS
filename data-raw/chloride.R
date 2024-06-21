@@ -8,10 +8,10 @@ chloride <- readr::read_delim(
   col_types = rep("c", 8),
   col_names = F,
   delim = "\t"
-  ) %>%
+) %>%
   filter(row_number() > 1) %>%
   mutate(
-    across(everything(), ~str_remove_all(.x, "�")),
+    across(everything(), ~ str_remove_all(.x, "�")),
     block = 1:4
   ) %>%
   pivot_longer(
@@ -24,7 +24,7 @@ chloride <- readr::read_delim(
     unit = rep(c(rep(1, 4), rep(2, 4)), 4),
     amount = rep(c("low", "low", "high", "high"), 8),
     quality = rep(c("low", "high"), 16),
-    across(c(amount, quality), ~factor(.x, levels = c("low", "high"))),
+    across(c(amount, quality), ~ factor(.x, levels = c("low", "high"))),
     across(c(block, unit), as.factor)
   ) %>%
   labelled::set_variable_labels(

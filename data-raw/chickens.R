@@ -2,7 +2,7 @@
 library(tidyr)
 
 chickens <- readr::read_delim(
-  file = here::here("data-raw", "data-files", "chickens.dat"),,
+  file = here::here("data-raw", "data-files", "chickens.dat"),
   col_types = c("i", rep("n", 3)),
   col_names = c("block", "control", "low", "high")
 ) %>%
