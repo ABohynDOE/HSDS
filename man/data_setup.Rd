@@ -4,10 +4,12 @@
 \alias{data_setup}
 \title{Setup for a new data set}
 \usage{
-data_setup(data)
+data_setup(data, open = rlang::is_interactive())
 }
 \arguments{
 \item{data}{character. Name of the data set for which the files are created. Must be an existing \code{.dat} file in the \code{data-raw} folder.}
+
+\item{open}{Whether to open the file for interactive editing.}
 }
 \description{
 Generate the three files needed for a new data set:
@@ -15,6 +17,7 @@ Generate the three files needed for a new data set:
 \item A file to import the raw data as an R data set
 \item A file to generate the documentation of the data set
 \item A file to contain the examples for the data generated
+and opens the file interactively if needed.
 }
 }
 \keyword{internal}
