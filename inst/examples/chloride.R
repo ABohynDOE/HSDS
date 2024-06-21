@@ -8,7 +8,7 @@ chloride %>%
   geom_point() +
   geom_line() +
   facet_wrap(
-    .~block,
+    . ~ block,
     nrow = 2,
     labeller = labeller(.rows = ~paste0("Block ", .x))
   ) +

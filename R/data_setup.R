@@ -13,11 +13,19 @@
 data_setup <- function(data, open = rlang::is_interactive()) {
   # ARG CHECK ----
   if (!is.character(data)) {
-    cli::cli_abort(c("{.var data} must be a character", "x" = "You've supplied a {.cls {class(data)}}"))
+    cli::cli_abort(
+      c(
+        "{.var data} must be a character",
+        "x" = "You've supplied a {.cls {class(data)}}"
+      )
+    )
   }
   if (!fs::file_exists(here::here("data-raw", "data-files", paste0(data, ".dat")))) {
     cli::cli_abort(
-      c("{.var data} must be the name of an existing data file", "x" = "File {.file {paste0(data, '.dat')}} doesn't exist in {.path data-raw/data-files}")
+      c(
+        "{.var data} must be the name of an existing data file",
+        "x" = "File {.file {paste0(data, '.dat')}} doesn't exist in {.path data-raw/data-files}"
+      )
     )
   }
   # DATA GENERATION ----
@@ -44,7 +52,7 @@ data_setup <- function(data, open = rlang::is_interactive()) {
     # Info message to user
     cli::cli_alert_info("Data generation file for '{data}' created at: {.path {data_raw_path}}")
   }
-  edit_file(data_raw_path, open = open)
+  usethis::edit_file(data_raw_path, open = open)
 
 
   # DATA DOCUMENTATION ----
@@ -76,7 +84,7 @@ data_setup <- function(data, open = rlang::is_interactive()) {
     # Info message to user
     cli::cli_alert_info("Data documentation file for '{data}' created at: {.path {data_doc_path}}")
   }
-  edit_file(data_doc_path, open = open)
+  usethis::edit_file(data_doc_path, open = open)
 
   # DATA EXAMPLES ----
   data_example_path <- here::here("inst", "examples", paste0(data, ".R"))
@@ -87,5 +95,5 @@ data_setup <- function(data, open = rlang::is_interactive()) {
     # Info message to user
     cli::cli_alert_info("Data example file for '{data}' created at: {.path {data_example_path}}")
   }
-  edit_file(data_example_path, open = open)
+  usethis::edit_file(data_example_path, open = open)
 }

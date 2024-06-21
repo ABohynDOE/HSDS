@@ -62,7 +62,7 @@ p_subj <- ggplot(flicker, aes(x = subject, y = frequency)) +
 p_days + p_treat + p_subj + plot_layout(nrow = 2)
 
 # Mixed model with random effects for day and subject
-mod <- lmer(frequency ~ treatment + (1 |subject) + (1 | day), data = flicker)
+mod <- lmer(frequency ~ treatment + (1 | subject) + (1 | day), data = flicker)
 
 # Plot of the marginal means per treatment, using the `modelbased` package
 modelbased::estimate_means(mod, at = c("treatment")) |>

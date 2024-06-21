@@ -32,7 +32,7 @@ interval <- rbind(
   select(car, hour:second)
 
 # Add the times together to have uniform times
-for (i in 1:nrow(interval)) {
+for (i in seq_len(nrow(interval))) {
   if (interval$hour[i] == 0) {
     interval$hour[i] <- interval$hour[i - 1]
   }

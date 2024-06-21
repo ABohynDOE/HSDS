@@ -6,7 +6,7 @@ library(tidyr)
 chloride <- readr::read_delim(
   file = here::here("data-raw", "data-files", "chloride.dat"),
   col_types = rep("c", 8),
-  col_names = F,
+  col_names = FALSE,
   delim = "\t"
 ) %>%
   filter(row_number() > 1) %>%

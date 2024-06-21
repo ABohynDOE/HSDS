@@ -10,7 +10,7 @@
 #' \describe{
 #'   \item{weight}{Weight gain in grams}
 #'   \item{source}{Protein source (`beef` or `cereal`)}
-#'   \item{height}{Protein amount (`low` or `high`)}
+#'   \item{amount}{Protein amount (`low` or `high`)}
 #' }
 #'
 #' @example inst/examples/weight.R
