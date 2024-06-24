@@ -4,6 +4,15 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  comment = "##",
+  fig.path = "man/figures/README-"
+)
+```
+
 # HSDS <img src="man/figures/logo.svg" align="right" height="140"/>
 
 The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the data sets of the book ["A Handbook of Small Data Sets"](https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667) (1994) of David J. Hand available. These data sets are particularly useful to demonstrate examples of function or statistical tests, but also to teach about statistics and R.
@@ -24,25 +33,26 @@ devtools::install_github("ABohynDOE/HSDS")
 
 The book contains more than 500 data sets. For the moment, only some are available. They are summarized in the table below, along with their names, what they contain, their structure, and the type of variables present.
 
-```{r, results='asis', echo=FALSE}
+```{r data-table, results='asis', echo=FALSE}
 # Load data index
 load(here::here("R", "sysdata.rda"))
 # Reference url of the pkgdown website
-refurl <- "http://ABohynDOE.github.io/HSDS/reference/"
+refurl <- "http://abohyndoe.github.io/HSDS/reference/"
 # Select data sets that are already present
 current_data_index |>
   dplyr::arrange(num) |>
   dplyr::select(
-    name = filename,
+    Name = filename,
     Title = title,
     Structure = size,
     Variables = structure
   ) |>
   dplyr::mutate(
-    name = glue::glue("[`{name}`]({refurl}{name}.html)")
+    Name = glue::glue("[`{Name}`]({refurl}{Name}.html)")
   ) |>
   gt::gt() |>
   gt::fmt_markdown() |>
+  gt::cols_align(align = "left", columns = gt::everything()) |>
   gt::as_raw_html()
 ```
 
@@ -59,12 +69,13 @@ ggplot(germin, aes(x = water, y = seeds, color = box)) +
   theme_bw()
 ```
 
-```{r, echo=FALSE}
+```{r example, echo=FALSE}
 library(ggplot2)
 load(here::here("data/germin.rda"))
 ggplot(germin, aes(x = water, y = seeds, color = box)) +
   geom_boxplot(na.rm = T) +
-  theme_bw()
+  theme_bw() +
+  ggeasy::easy_labs()
 ```
 
 ## Contributing
