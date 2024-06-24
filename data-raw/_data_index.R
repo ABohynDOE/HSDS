@@ -1,20 +1,20 @@
+#' This script loads the data-index file located in
+#' 'inst/extdata/data-index.csv' and generate the `current_data_index` which
+#' contains only the data sets already imported in the package.
+#'
+#' In the long run, this script will be deleted, and only the "full" data index
+#' will be preserved as a data file.
+#'
+#' The `current_data_index` file is also used by the `find_data()` function.
+
 library(dplyr, warn.conflicts = F)
 library(stringr)
 
-# Read in the data index text file
-data_index_lines <- readLines(here::here("data-raw", "data_index.txt"))
-match <- str_match(
-  data_index_lines,
-  "^(?<num>\\d+)\\.\\s(?<title>.+)\\s(?<rows>\\d+)\\s(?<cols>\\d+)\\s(?<columns>.+)\\s(?<filename>[A-Z]+)\\.DAT$"
+# Load the data index
+data_index <- readr::read_csv(
+  file = here::here("inst", "extdata", "data-index.csv"),
+  show_col_types = FALSE
 )
-
-# Turn it into a dataframe
-data_index <- match[,2:ncol(match)] %>%
-  as.data.frame() %>%
-  mutate(
-    filename = tolower(filename),
-    num = as.numeric(num)
-  )
 
 # Function to load the data
 load_data <- function(filename){
