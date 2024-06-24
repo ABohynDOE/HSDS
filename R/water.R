@@ -11,5 +11,7 @@
 #'   \item{lat}{Latitude using the EPSG:4326 coordinate system}
 #' }
 #'
+#' @example inst/examples/water.R
+#'
 #' @source {Hills, M. and the M345 Course Team (1986) \emph{M345 Statistical Methods, Unit 3: Examining Straight-line Data}, Milton Keynes: The Open University, 28. Data provided by Professor M.J. Gardner, Medical Research Council Environmental Epiderniology Research Unit, Southampton.}
 "water"
