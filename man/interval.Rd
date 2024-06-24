@@ -28,4 +28,5 @@ The data were collected by Professor Toby Lewis as a sample of event times in
 a point process which it may be appropriate to model as a Poisson process.
 They are also ideal to learn to handle time objects in R.
 }
-\keyword{datasets}
+\keyword{count}
+\keyword{poisson}

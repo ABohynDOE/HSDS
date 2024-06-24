@@ -15,4 +15,6 @@
 #'   \item{time}{Time at which the car passed the junction. Encoded as a string in the 'HH:MM:SS' format}
 #' }
 #' @source {Lewis, T. and the M345 Course Team (1986) \emph{M345 Statistical Methods, Unit 2: Basic Methods: Testing and Estimation}, Milton Keynes: The Open University, 16.}
+#'
+#' @keywords poisson count
 "interval"
