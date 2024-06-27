@@ -1,21 +1,18 @@
 ---
-format: gfm
-editor: 
-  markdown: 
-    wrap: 72
+output: github_document
 ---
 
-<!-- README.md is generated from README.qmd. Please edit that file -->
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r setup, include = FALSE, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   warning = FALSE,
-  comment = "##",
-  fig.width = 4,
-  fig.height = 3,
+  comment = "#>",
+  # out.width = "100%",
   fig.path = "man/figures/README-"
 )
+
 # Source the data-index file to update it to the current data sets
 source(here::here("data-raw", "_data_index.R"))
 ```
@@ -90,7 +87,7 @@ ggplot(tearing, aes(x = hardness, y = abrasion_loss)) +
   theme_bw()
 ```
 
-```{r example1, echo=FALSE}
+```{r example1, echo=FALSE, out.width="50%", fig.align='center'}
 library(ggplot2)
 
 load(here::here("data/abrasion.rda"))
