@@ -39,7 +39,7 @@ data_setup <- function(data, open = rlang::is_interactive()) {
     # Generic code to write to all files
     text <- c(
       glue::glue("# {toupper(data)} - data raw"),
-      "library(dplyr)",
+      "library(dplyr, warn.conflicts = FALSE)",
       "",
       glue::glue("{data} <- readr::read_delim("),
       glue::glue('  file = here::here("data-raw", "data-files", "{data}.dat"),'),
