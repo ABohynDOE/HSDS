@@ -25,9 +25,11 @@ p_days + p_treat + p_subj + plot_layout(nrow = 2)
 mod <- lmer(frequency ~ treatment + (1 | subject) + (1 | day), data = flicker)
 
 # Plot of the marginal means per treatment, using the `modelbased` package
-modelbased::estimate_means(mod, at = c("treatment")) |>
+modelbased::estimate_means(mod, by = c("treatment")) |>
   plot() +
   theme_classic()
 
 # Table of the contrast between treatments, using the `modelbased` package
-modelbased::estimate_contrasts(mod, contrast = "treatment")
+emm <- modelbased::estimate_contrasts(mod, contrast = "treatment")
+insight::format_table(emm) |>
+  insight::export_table(format = "html")
