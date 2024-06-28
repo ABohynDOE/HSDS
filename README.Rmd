@@ -62,7 +62,8 @@ current_data_index |>
     Name = filename,
     Title = title,
     Structure = size,
-    Variables = structure
+    Variables = structure,
+    Topics = keywords
   ) |>
   dplyr::mutate(
     Name = glue::glue("[`{Name}`]({refurl}{Name}.html)")
@@ -115,3 +116,7 @@ so, please respect the following guidelines:
     package for example)
 
 -   data sets should be documented using the text from the book
+
+-   examples must be submitted with the data set (in a separate example file)
+
+-   keywords must be added to the data sets
