@@ -23,8 +23,10 @@
 #' mod <- lm(abrasion_loss ~ tensile_strength + hardness, data = abrasion)
 #' summary(mod)
 #'
-#' plot(abrasion$hardness, abrasion$abrasion_loss, xlab = "Hardness", ylab =
-#' "Abrasion loss")
+#' plot(abrasion$hardness, abrasion$abrasion_loss,
+#'   xlab = "Hardness", ylab =
+#'     "Abrasion loss"
+#' )
 #'
 #' @source {Davies, O.L. and Goldsmith, P.L. (eds.) (1972) \emph{Statistical
 #'   Methods in Research and Production}, 4th Edition, Edinburgh: Oliverand

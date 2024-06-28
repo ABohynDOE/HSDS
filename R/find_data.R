@@ -15,9 +15,9 @@
 #'
 #' @md
 #' @export
-find_data <- function(topic, max_print = 10){
+find_data <- function(topic, max_print = 10) {
   # Check that topic is a string
-  if (!is.character(topic)){
+  if (!is.character(topic)) {
     cli::cli_abort("`topic` must be a string")
   }
   # All topics should be lowercase to avoid mismatches
@@ -53,7 +53,7 @@ find_data <- function(topic, max_print = 10){
 
 #' Print information about a data set using the `cli` package
 #' @keywords internal
-print_dataset_info <- function(name, description, size, ...){
+print_dataset_info <- function(name, description, size, ...) {
   link <- paste0("https://abohyndoe.github.io/HSDS/reference/", name, ".html")
   cli::cli_bullets(
     c("*" = "{.href [{.strong {name}}]({link})} ({size}): {description}")

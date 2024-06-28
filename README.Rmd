@@ -95,7 +95,7 @@ load(here::here("data/abrasion.rda"))
 
 ggplot(abrasion, aes(x = hardness, y = abrasion_loss)) +
   geom_point() +
-  geom_smooth(method = "lm", formula = 'y ~ x', se = FALSE) +
+  geom_smooth(method = "lm", formula = "y ~ x", se = FALSE) +
   ggeasy::easy_labs() +
   theme_bw(13)
 ```

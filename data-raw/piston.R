@@ -4,9 +4,9 @@ library(forcats)
 
 piston <- readr::read_delim(
   file = here::here("data-raw", "data-files", "piston.dat"),
-  col_types = 'n',
+  col_types = "n",
   col_names = c("North", "Center", "South", "Total")
-  ) %>%
+) %>%
   mutate(compressor = c(1:4, NA), .before = 1) %>%
   select(-Total) %>%
   filter(!is.na(compressor)) %>%
