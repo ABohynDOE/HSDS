@@ -6,3 +6,4 @@
 ^docs$
 ^pkgdown$
 ^\.github$
+^inst/extdata/data-index\.csv$
