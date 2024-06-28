@@ -24,9 +24,10 @@ find_data <- function(topic, max_print = 10){
   topic <- tolower(topic)
   # Retrieve all keywords in current database
   keywords <- current_data_index$keywords |>
-    lapply(function(x) strsplit(x, ",")) |>
-    lapply(trim_ws) |>
-    unlist()
+    sapply(function(x) strsplit(x, ",")) |>
+    sapply(trimws) |>
+    unlist() |>
+    unname()
   # Check that topic matches at least one keyword
   if (!(topic %in% keywords)) {
     cli::cli_abort(
