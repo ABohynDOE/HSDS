@@ -48,4 +48,4 @@ ggplot(weight, aes(x = amount, y = weight, color = source)) +
 aov(weight ~ amount * source, data = weight) \%>\%
   summary()
 }
-\keyword{datasets}
+\keyword{Two-way-ANOVA}

@@ -48,4 +48,4 @@ ggplot(cement, aes(y = log(strength), x = 1 / time)) +
 lm(log(strength) ~ I(1 / time), data = cement) |>
   summary()
 }
-\keyword{datasets}
+\keyword{Non-linear}

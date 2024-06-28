@@ -14,6 +14,8 @@
 #'
 #' @example inst/examples/cement.R
 #'
+#' @keywords Non-linear
+#'
 #' @source {Hald, A. (1952) \emph{Statistical Theory with Engineering
 #'   Applications}, New York: John Wiley & Sons, 451.}
 "cement"

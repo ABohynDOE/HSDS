@@ -15,6 +15,8 @@
 #'
 #' @example inst/examples/weight.R
 #'
+#' @keywords Two-way-ANOVA
+#'
 #' @source {Snedecor, G.W. and Cochran, G.C. (1967) \emph{Statistical Methods},
 #'   6th edition, Ames, Iowa: Iowa State University Press, 347.}
 "weight"
