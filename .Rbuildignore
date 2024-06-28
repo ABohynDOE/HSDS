@@ -7,3 +7,4 @@
 ^pkgdown$
 ^\.github$
 ^inst/extdata/data-index\.csv$
+^README\.Rmd$
