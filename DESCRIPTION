@@ -3,7 +3,7 @@ Type: Package
 Title: Data sets from the "Handbook of Small Data Sets", Hand et al. (1994)
 Version: 0.1.0
 Authors@R: person("Bohyn", "Alexandre", email = "alexandre.bohyn@kuleuven.be",
-  role = c("aut", "cre"))
+  role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9776-7467"))
 Description: Data package containing all data sets presented in the book "A Handbook of Small Data Sets" (1994) of David J. Hand. These data sets are particularly useful to demonstrate examples or to use for teaching.
 License: CC0
 Encoding: UTF-8
