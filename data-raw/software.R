@@ -20,5 +20,4 @@ software <- readr::read_delim(
     failure_id = "Failure number"
   )
 
-
 usethis::use_data(software, overwrite = TRUE)
