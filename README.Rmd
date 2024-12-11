@@ -73,7 +73,7 @@ ggplot(germin, aes(x = water, y = seeds, color = box)) +
 library(ggplot2)
 load(here::here("data/germin.rda"))
 ggplot(germin, aes(x = water, y = seeds, color = box)) +
-  geom_boxplot(na.rm = T) +
+  geom_boxplot(na.rm = TRUE) +
   theme_bw() +
   ggeasy::easy_labs()
 ```
