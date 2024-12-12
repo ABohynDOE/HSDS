@@ -1,33 +1,23 @@
 #' Data processing status
 #'
-#' List the data sets already processed in the package
+#' List the data sets already processed in the package.
 #'
 #' @param print Number of unprocessed data sets to print (default is 5)
 #' @keywords internal
 data_list <- function(print = 5) {
-  # Read the raw data index file
-  raw_data_index <- readr::read_delim(
-    file = here::here("data-raw/raw_data_index.csv"),
-    delim = ";",
-    show_col_types = FALSE,
-    col_names = TRUE
-  )
+  # Load the raw data index and the current data index
+  load(here::here("R/sysdata.rda"))
 
-  # Extract the name of all data sets
-  all_files <- raw_data_index$file_name |>
-    stringr::str_remove(".DAT") |>
-    stringr::str_to_lower()
-
-  # List data sets already processed
+  # List data sets already processed and all the files too
   # They are present in the "R/data" directory
-  processed_files <- fs::dir_ls(here::here("data")) |>
-    fs::path_file() |>
-    fs::path_ext_remove()
+  all_files <- raw_data_index$file_name |>
+    stringr::str_remove('.DAT') |>
+    stringr::str_to_lower()
+  processed_files <- data_index$name
   n_proc <- length(processed_files)
 
   # Isolate the unprocessed files
   unprocessed_files <- setdiff(all_files, processed_files)
-
   n_unproc <- length(unprocessed_files)
 
   # Print the number of processed/unprocessed files
