@@ -19,7 +19,7 @@ data_index_base <- raw_data_index |>
   dplyr::mutate(name = stringr::str_remove(file_name, ".DAT") |>
            stringr::str_to_lower()) |>
   dplyr::filter(name %in% processed_files) |>
-  dplyr::select(name, description)
+  dplyr::select(num = index, name, description)
 
 # Function to find the size of the a processed data set and the type of all the
 # columns in the data set
@@ -45,7 +45,7 @@ data_index <- data_index_base |>
     col_types = purrr::map(info, ~.x$col_types)
   ) |>
   tidyr::unnest(cols = c(size, col_types)) |>
-  dplyr::select(name, description, size, col_types)
+  dplyr::select(num, name, description, size, col_types)
 
 # Save the raw data index and the current data index to the same internal data
 # file

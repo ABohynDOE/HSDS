@@ -6,7 +6,7 @@
 #' @keywords internal
 data_list <- function(print = 5) {
   # Load the raw data index and the current data index
-  load(here::here("R/sysdata.rda"))
+  source("data-raw/data_index.R")
 
   # List data sets already processed and all the files too
   # They are present in the "R/data" directory
