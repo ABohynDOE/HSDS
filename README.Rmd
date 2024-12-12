@@ -33,26 +33,31 @@ devtools::install_github("ABohynDOE/HSDS")
 
 The book contains more than 500 data sets. For the moment, only some are available. They are summarized in the table below, along with their names, what they contain, their structure, and the type of variables present.
 
+```{r update-data-index, echo=FALSE, warning=FALSE, message=FALSE}
+source("data-raw/data_index.R")
+```
+
 ```{r data-table, results='asis', echo=FALSE}
-# Load data index
-load(here::here("R", "sysdata.rda"))
+# Load the current data index
+load(here::here("R/sysdata.rda"))
+
 # Reference url of the pkgdown website
 refurl <- "http://abohyndoe.github.io/HSDS/reference/"
+
 # Select data sets that are already present
-current_data_index |>
+data_index |>
   dplyr::arrange(num) |>
-  dplyr::select(
-    Name = filename,
-    Title = title,
-    Structure = size,
-    Variables = structure
-  ) |>
-  dplyr::mutate(
-    Name = glue::glue("[`{Name}`]({refurl}{Name}.html)")
-  ) |>
+  dplyr::mutate(url_name = glue::glue("[`{name}`]({refurl}{name}.html)")) |>
+  dplyr::select(url_name, description, size, col_types) |>
   gt::gt() |>
   gt::fmt_markdown() |>
   gt::cols_align(align = "left", columns = gt::everything()) |>
+  gt::cols_label(
+    url_name = "Name",
+    description = "Description",
+    size = "Structure",
+    col_types = "Variable types"
+  ) |> 
   gt::as_raw_html()
 ```
 
