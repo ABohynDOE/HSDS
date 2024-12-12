@@ -4,24 +4,26 @@
 # HSDS <img src="man/figures/logo.svg" align="right" height="140"/>
 
 The goal of [HSDS](https://github.com/ABohynDOE/HSDS) is to make all the
-data sets of the book [“A Handbook of Small Data
+datasets of the book [“A Handbook of Small Data
 Sets”](https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667)
-(1994) of David J. Hand available. These data sets are particularly
-useful to demonstrate examples of function or statistical tests, but
-also to teach about statistics and R.
+(1994) of David J. Hand available. These data sets are especially useful
+for demonstrating statistical methods, testing functions, or teaching
+statistics and R programming.
 
-All data sets are already available individually at this repo:
-<https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master>.
-However, they are not immediately usable in R, and undocumented. This
-package aims to solve this issue, and provide clean and documented data
-sets.
+While the individual datasets are already available in a [separate
+repository](https://github.com/JedStephens/Handbook-of-Small-Data-Sets/tree/master).
+they are not formatted for immediate use in R and lack documentation.
+This package addresses these issues by providing clean and fully
+documented datasets ready for analysis.
 
-Do you like this package and want to support me ? [![“Buy Me A
+Do you like this package and want to support its development ? [![“Buy
+Me A
 Coffee”](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/abohyn)
 
 ## Installation
 
-You can install the development version of HSDS like so:
+To install the development version of HSDS from GitHub, use the
+following command:
 
 ``` r
 devtools::install_github("ABohynDOE/HSDS")
@@ -29,12 +31,12 @@ devtools::install_github("ABohynDOE/HSDS")
 
 ## Available data sets
 
-The book contains more than 500 data sets. For the moment, only some are
-available. They are summarized in the table below, along with their
-names, what they contain, their structure, and the type of variables
-present.
+The book contains over 500 datasets. Currently, only a subset is
+available in this package. The table below summarizes the datasets
+included so far, with details on their names, descriptions, structures,
+and variable types.
 
-<div id="bjaubqecwo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="dmpomcfbdc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -108,11 +110,11 @@ present.
 
 ## Example
 
-This is a basic example which shows you how to use a data set to make a
-nice plot:
+Here’s a simple example demonstrating how to use one of the datasets to
+create a visualization:
 
 ``` r
-library(HSDS)
+library(hsds)
 library(ggplot2)
 
 ggplot(germin, aes(x = water, y = seeds, color = box)) +
@@ -120,21 +122,37 @@ ggplot(germin, aes(x = water, y = seeds, color = box)) +
   theme_bw()
 ```
 
-![](man/figures/README-example-1.png)<!-- -->
+<img src="man/figures/README-example-1.png" width="500px" />
 
-## Contributing
+## Contributing to the package
 
-We are far from the 500 data sets, so any help is welcome ! If you want
-to contribute, all raw data sets are already present in the repo (at
-`data-raw/data-files`), so feel free to clean one or more… ! If you do
-so, please respect the following guidelines:
+We are far from reaching the goal of 500 datasets, so your contributions
+are more than welcome! If you’d like to help, all raw datasets are
+already available in the repository under `data-raw/data-files`. Feel
+free to clean one or more datasets and submit your contributions.
 
-- data sets should be named after the data structure index of the book
-  (available
-  [here](https://github.com/JedStephens/Handbook-of-Small-Data-Sets/blob/master/data_structure_index_HSDS.pdf))
+When contributing, please follow these guidelines:
 
-- all variables in the data set should be labelled (using the
-  [`labelled`](https://cran.r-project.org/web/packages/labelled/vignettes/intro_labelled.html)
-  package for example)
+1.  **Dataset Naming**  
+    Name each dataset based on the data structure index provided in the
+    book. The index is available
+    [here](https://github.com/JedStephens/Handbook-of-Small-Data-Sets/blob/master/data_structure_index_HSDS.pdf)
+    or in the Excel file `data-raw/raw_data_index.xlsx`.
 
-- data sets should be documented using the text from the book
+2.  **Variable Labelling**  
+    Ensure that all variables in the dataset are properly labelled.
+    Labels don’t have to be long but should be meaningful to a newcomer.
+    You can use the
+    [`labelled`](https://cran.r-project.org/web/packages/labelled/vignettes/intro_labelled.html)
+    package or a similar tool to add these labels.
+
+3.  **Documentation**  
+    Document each dataset using the corresponding text from the book to
+    maintain consistency and provide clear context.
+
+4.  **Examples of Usage**  
+    Add examples of how to use the datasets to your code. These examples
+    should be saved as separate files in the `inst/examples` directory.
+
+Your contributions will help us expand this resource and make it even
+more valuable for the community. Thank you for your support!
