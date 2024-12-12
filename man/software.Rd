@@ -50,5 +50,7 @@ with(
     xlab = "Time (CPU seconds)", ylab = "Number of failures"
   )
 )
+# Add lines
+with(software, lines(time, failure_id))
 }
 \keyword{datasets}
