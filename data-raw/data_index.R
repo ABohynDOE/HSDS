@@ -49,4 +49,7 @@ data_index <- data_index_base |>
 
 # Save the raw data index and the current data index to the same internal data
 # file
-usethis::use_data(raw_data_index, data_index, overwrite = TRUE, internal = TRUE)
+save(
+  raw_data_index, data_index,
+  file = "R/sysdata.rda"
+)

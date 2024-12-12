@@ -5,7 +5,6 @@
 #' @param print Number of unprocessed data sets to print (default is 5)
 #' @keywords internal
 data_list <- function(print = 5) {
-  # Load the raw data index and the current data index
   source("data-raw/data_index.R")
 
   # List data sets already processed and all the files too
@@ -36,4 +35,8 @@ data_list <- function(print = 5) {
   )
   cli::cli_text("...and {n_unproc - n_proc} more !")
   cli::cli_end(ul)
+  first_unproc <- unprocessed_files[1]
+  cli::cli_alert_info(
+    "Use {.code data_setup(data = \"{first_unproc}\")} to generate the adequate files to process this data set"
+  )
 }

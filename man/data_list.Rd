@@ -2,7 +2,7 @@
 % Please edit documentation in R/data_list.R
 \name{data_list}
 \alias{data_list}
-\title{List the data sets already processed in the package}
+\title{Data processing status}
 \usage{
 data_list(print = 5)
 }
@@ -10,6 +10,6 @@ data_list(print = 5)
 \item{print}{Number of unprocessed data sets to print (default is 5)}
 }
 \description{
-List the data sets already processed in the package
+List the data sets already processed in the package.
 }
 \keyword{internal}

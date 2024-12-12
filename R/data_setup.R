@@ -21,7 +21,7 @@ data_setup <- function(data, open = TRUE) {
 
   # Data must correspond to a raw data file in `data-raw`
   raw_data_path <- fs::path("data-raw/data-files", data, ext = "dat")
-  if (!fs::file_exists(data_path)) {
+  if (!fs::file_exists(raw_data_path)) {
     cli::cli_abort("Raw data file {.file {raw_data_path}} does not exist!")
   }
 
@@ -33,6 +33,7 @@ data_setup <- function(data, open = TRUE) {
 
   # Example file ------------------------------------------------------------
 
+  cli::cli_h3("Example file")
   usethis::use_template(
     template = "example.R",
     save_as = fs::path("inst/examples/", data, ext = "R"),
@@ -44,6 +45,7 @@ data_setup <- function(data, open = TRUE) {
 
   # Documentation file ------------------------------------------------------
 
+  cli::cli_h3("Documentation file")
   usethis::use_template(
     template = "documentation.R",
     save_as = fs::path("R/", data, ext = "R"),
@@ -57,6 +59,7 @@ data_setup <- function(data, open = TRUE) {
 
   # Data import file --------------------------------------------------------
 
+  cli::cli_h3("Data import file")
   usethis::use_template(
     template = "data_import.R",
     save_as = fs::path("data-raw/", data, ext = "R"),
