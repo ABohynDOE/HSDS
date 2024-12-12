@@ -35,13 +35,22 @@ devtools::install_github("ABohynDOE/HSDS")
 
 ## Available data sets
 
-The book contains over 500 datasets.
-Currently, only a subset is available in this package. 
-The table below summarizes 10 randomly selected datasets included so far, with details on their names, descriptions, structures, and variable types.
-
 ```{r update-data-index, echo=FALSE, warning=FALSE, message=FALSE}
 source("data-raw/data_index.R")
+n_done <- nrow(data_index)
+completed <- n_done / nrow(raw_data_index)
+compl_perc <- scales::percent(completed)
+bar_url <- glue::glue("https://progress-bar.xyz/{round(completed*100)}/?width=400")
 ```
+
+The book contains over 500 datasets. 
+Currently, only `r n_done` datasets (`r compl_perc`) have been processed and included in this package.
+
+![](`r bar_url`)
+
+The table below summarizes 10 randomly selected datasets included so far, with details on their names, descriptions, structures, and variable types.
+
+
 
 ```{r data-table, results='asis', echo=FALSE}
 # Load the current data index
