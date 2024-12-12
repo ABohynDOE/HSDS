@@ -6,94 +6,62 @@
 #' - A file to contain the examples for the data generated
 #' and opens the file interactively if needed.
 #'
-#' @param data character. Name of the data set for which the files are created. Must be an existing `.dat` file in the `data-raw` folder.
-#' @param open Whether to open the file for interactive editing.
+#' @param data Name of the data set for which the files are created. Must be an existing `.dat` file in the `data-raw` folder.
+#' @param open Whether to open the files for interactive editing.
 #' @md
 #' @keywords internal
-data_setup <- function(data, open = rlang::is_interactive()) {
-  # ARG CHECK ----
-  if (!is.character(data)) {
-    cli::cli_abort(
-      c(
-        "{.var data} must be a character",
-        "x" = "You've supplied a {.cls {class(data)}}"
-      )
-    )
+data_setup <- function(data, open = TRUE) {
+
+  # Data checks -------------------------------------------------------------
+
+  # Data must be a string
+  if (!rlang::is_character(data)) {
+    cli::cli_abort("{.var data} must be a character")
   }
-  if (!fs::file_exists(here::here("data-raw", "data-files", paste0(data, ".dat")))) {
-    cli::cli_abort(
-      c(
-        "{.var data} must be the name of an existing data file",
-        "x" = "File {.file {paste0(data, '.dat')}} doesn't exist in {.path data-raw/data-files}"
-      )
-    )
+
+  # Data must correspond to a raw data file in `data-raw`
+  raw_data_path <- fs::path("data-raw/data-files", data, ext = "dat")
+  if (!fs::file_exists(data_path)) {
+    cli::cli_abort("Raw data file {.file {raw_data_path}} does not exist!")
   }
-  # DATA GENERATION ----
-  # Location of the file to convert the raw data
-  data_raw_path <- here::here("data-raw", paste0(data, ".R"))
-  if (fs::file_exists(data_raw_path)) {
-    cli::cli_abort("File {.path {data_raw_path}} already exists, skipping !")
-  } else {
-    # Generate the empty file
-    fs::file_create(data_raw_path)
-    # Generic code to write to all files
-    text <- c(
-      glue::glue("# {toupper(data)} - data raw"),
-      "library(dplyr)",
-      "",
-      glue::glue("{data} <- readr::read_delim("),
-      glue::glue('  file = here::here("data-raw", "data-files", "{data}.dat"),'),
-      ")",
-      "",
-      glue::glue("usethis::use_data({data}, overwrite = TRUE)")
-    )
-    # Write generic code to empty file
-    writeLines(text, con = data_raw_path)
-    # Info message to user
-    cli::cli_alert_info("Data generation file for '{data}' created at: {.path {data_raw_path}}")
+
+  # The data file cannot already be loaded
+  data_path <- fs::path("data", data, ext = "rda")
+  if (fs::file_exists(data_path)) {
+    cli::cli_abort("File {.file {data_path}} already exists!")
   }
-  usethis::edit_file(data_raw_path, open = open)
+
+  # Example file ------------------------------------------------------------
+
+  usethis::use_template(
+    template = "example.R",
+    save_as = fs::path("inst/examples/", data, ext = "R"),
+    open = open,
+    data = list(data = data),
+    package = "hsds"
+  )
 
 
-  # DATA DOCUMENTATION ----
-  # Name of the data documentation file
-  data_doc_path <- here::here("R", paste0(data, ".R"))
-  if (fs::file_exists(data_doc_path)) {
-    cli::cli_abort("File {.path {data_doc_path}} already exists, skipping !")
-  } else {
-    # Generate the empty file
-    fs::file_create(data_doc_path)
-    # Generic code to write to documentation files
-    text <- c(
-      "#' ",
-      "#' ",
-      "#' ",
-      "#' ",
-      "#' @format A data frame with X rows and X columns:",
-      "#' \\describe{",
-      "#'   \\item{}{}",
-      "#' }",
-      "#' ",
-      paste0("#' @example inst/examples/", data, ".R"),
-      "#' ",
-      "#' @source {}",
-      paste0('"', data, '"')
-    )
-    # Write text to raw data file
-    writeLines(text, con = data_doc_path)
-    # Info message to user
-    cli::cli_alert_info("Data documentation file for '{data}' created at: {.path {data_doc_path}}")
-  }
-  usethis::edit_file(data_doc_path, open = open)
+  # Documentation file ------------------------------------------------------
 
-  # DATA EXAMPLES ----
-  data_example_path <- here::here("inst", "examples", paste0(data, ".R"))
-  if (fs::file_exists(data_example_path)) {
-    cli::cli_abort("File {.path {data_example_path}} already exists, skipping !")
-  } else {
-    fs::file_create(data_example_path)
-    # Info message to user
-    cli::cli_alert_info("Data example file for '{data}' created at: {.path {data_example_path}}")
-  }
-  usethis::edit_file(data_example_path, open = open)
+  usethis::use_template(
+    template = "documentation.R",
+    save_as = fs::path("R/", data, ext = "R"),
+    open = open,
+    data = list(
+      example_path = fs::path("inst/examples/", data, ext = "R"),
+      data = data
+    ),
+    package = "hsds"
+  )
+
+  # Data import file --------------------------------------------------------
+
+  usethis::use_template(
+    template = "data_import.R",
+    save_as = fs::path("data-raw/", data, ext = "R"),
+    open = open,
+    data = list(data = data),
+    package = "hsds"
+  )
 }
