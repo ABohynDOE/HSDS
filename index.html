@@ -69,7 +69,9 @@
 <div class="section level2">
 <h2 id="available-data-sets">Available data sets<a class="anchor" aria-label="anchor" href="#available-data-sets"></a>
 </h2>
-<p>The book contains over 500 datasets. Currently, only a subset is available in this package. The table below summarizes 10 randomly selected datasets included so far, with details on their names, descriptions, structures, and variable types.</p>
+<p>The book contains over 500 datasets. Currently, only 15 datasets (3%) have been processed and included in this package.</p>
+<p><img src="https://progress-bar.xyz/3/?width=400"></p>
+<p>The table below summarizes 10 randomly selected datasets included so far, with details on their names, descriptions, structures, and variable types.</p>
 <div id="yzesyyichz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 
 
@@ -279,7 +281,7 @@ This function sets up all the necessary files for processing a new dataset. When
 }%%
 
 flowchart LR
-    A("data_setup()") --&gt;|Example of Usage| B(inst/examples/data.R)
+    A("data_setup(data)") --&gt;|Example of Usage| B(inst/examples/data.R)
     A --&gt;|Processing Script| C(data-raw/data.R)
     A --&gt;|Documentation| D(R/data.R)</code></pre>
 <p>When contributing, please also follow these guidelines:</p>
