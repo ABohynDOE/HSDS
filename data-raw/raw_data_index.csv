@@ -1,0 +1,511 @@
+﻿index;description;rows;columns;column_types;file_name
+1;Germinating seeds;48;3;binary, categorical, count;GERMIN.DAT
+2;Guessing lengths;44;1;numeric;LENGTHS.DAT
+3;Darwin's cross-fertilized and self-fertilized plants;15;2;rep(2) numeric;DARWIN.DAT
+4;Intervals between cars on the M1 motorway;41;1;numeric;INTERVAL.DAT
+5;Tearing factor for paper;20;2;numeric(2);TEARING.DAT
+6;Abrasion loss;30;3;numeric(3);ABRASION.DAT
+7;Mortality and water hardness;61;3;binary, rate(2);WATER.DAT
+8;Tensile strength of cement;21;2;numeric(2);CEMENT.DAT
+9;Weight gain in rats;40;3;binary(2) ,numeric;WEIGHT.DAT
+10;Weight of chickens;24;3;nominal, categorical, numeric;CHICKENS.DAT
+11;Flicker frequency;27;4;nominal(3), numeric;FLICKER.DAT
+12;Effect of ammonium chloride on yield;16;5;nominal, binary(3), numeric;CHLORIDE.DAT
+13;Comparing dishwashing detergents;36;3;nominal(2), count;DISHWASH.DAT
+14;Software system failures;136;1;numeric;SOFTWARE.DAT
+15;Piston-ring failures;12;3;categorical, nominal, count;PISTON.DAT
+16;Strength of chemical pastes;60;3;nominal(2), numeric;PASTES.DAT
+17;Human age and fatness;18;3;numeric, percentage, binary;HUMAN.DAT
+18;Motion sickness;49;3;binary(2), numeric;MOTION.DAT
+19;Plum root cuttings;960;3;binary(3);PLUM.DAT
+20;Spectacle wearing and delinquency;16;2;binary(2);GLASSES.DAT
+21;Yield of isatin derivative;16;5;binary(4), numeric;ISATIN.DAT
+22;Fecundity of fruitflies;75;2;nominal, numeric;FRUITFLY.DAT
+23;Butterfat;100;3;nominal, binary, numeric;BUTTER.DAT
+24;Snoring and heart disease;2484;2;categorical, binary;SNORING.DAT
+25;Trees' nearest neighbours;6;6;count(6);TREES.DAT
+26;Air pollution in US cities;41;7;numeric(6), count;USAIR.DAT
+27;Acacia ants;28;2;binary(2);ACACIA.DAT
+28;Vaccination;24;6;nominal(3), binary, count(2);VACCINE.DAT
+29;Peppers in glasshouses;24;6;binary(5), numeric;PEPPERS.DAT
+30;A clinical trial in lymphoma;273;2;categorical, binary;CLINICAL.DAT
+31;Danish do-it-yourself;1591;6;numeric, binary(4), categorical;DANISH.DAT
+32;Testing cement;36;3;nominal(2), numeric;TESTING.DAT
+33;Irises;150;5;numeric(4), nominal;IRISES.DAT
+34;Water voles;14;13;percentage(13);VOLES.DAT
+35;Facilities in East Jerusalem;8;9;perct~ntage(9);FACILITY.DAT
+36;Yields of winter wheat;12;4;rep(4) numeric;WHEAT.DAT
+37;WISC blocks;24;3;binary, numeric(2);BLOCKS.DAT
+38;Byssinosis;5419;6;categorical, binary(4), numeric;LUNG.DAT
+39;A tomato crossing experiment;1611;2;binary(2);TOMATO.DAT
+40;Coronary heart disease;1329;3;numeric(2), binary;CORONARY.DAT
+41;Toxaemia of pregnancy;113384;4;categorica1(2), binary(2);TOXAEMIA.DAT
+42;Starting positions in horse racing;144;1;rank;HORSE.DAT
+43;Saltiness judgements;9;1;numeric;SALT.DAT
+44;Oral socialization and explanations of illness;39;2;binary, categorical;ILLNESS.DAT
+45;Dopamine and schizophrenia;25;2;binary, numeric;DOPAMINE.DAT
+46;US cancer mortality;11;5;rep(2) count(2), numeric;USCANCER.DAT
+47;Cholesterol and behaviour type;3154;2;binary, numeric;BEHAVE.DAT
+48;Aflatoxin in peanuts;34;2;numeric, percentage;PEANUTS.DAT
+49;Anscombe's correlation data;11;2;numeric(2);ANSCOMBE.DAT
+50;Caffeine and finger tapping;30;2;numeric(2);CAFFEINE.DAT
+51;Jackal mandible lengths;20;2;binary, numeric;JACKAL.DAT
+52;Birds in paramo vegetation;14;5;count, numeric(4);PARAMO.DAT
+53;Extinction of marine genera;48;2;numeric, percentage;MARINE.DAT
+54;Household expenditures;40;5;binary, numeric( 4);HOUSE.DAT
+55;Cork deposits;28;4;numeric(4);CORK.DAT
+56;Creatinine kinase and heart attacks;360;2;binary, numeric;HEART.DAT
+57;Petrol expenditure;32;4;numeric(4);PETROL.DAT
+58;North Buckinghamshire moths;24;1;count;MOTHS.DAT
+59;Crowds and threatened suicide;21;2;binary(2);SUICIDE.DAT
+60;Putting the shot;20;1;numeric;SHOT.DAT
+61;Wooden toy prices;31;1;numeric;TOY.DAT
+62;Food prices;10;2;rep(2) numeric;FOOD.DAT
+63;UK eamings ratios;1;60;rep(12) numeric(5);EARNINGS.DAT
+64;Census data on 10 towns;10;4;percentage( 4);CENSUS.DAT
+65;Expenditure on food;11;2;numeric, percentage;EXPEND.DAT
+66;Anaerobic threshold;1;106;rep(53) numeric(2);ANAEROB.DAT
+67;Road casualties on Fridays;1;24;rep(24) count [time series];FRIDAY.DAT
+68;UK sprinters;10;2;maxima(2);UKSPRINT.DAT
+69;Unemployment and expenditure on motoring;11;2;percentage(2);MOTORING.DAT
+70;Cloud seeding;24;7;binary(2), numeric(5);CLOUD.DAT
+71;Calculator random digits;10;1;count;RANDOM.DAT
+72;Captopril and blood pressure;15;4;rep(2) numeric(2);BLOOD.DAT
+73;Food prices and house prices;1;38;rep(19) numeric(2);PRICES.DAT
+74;UNICEF data on child mortality;14;3;rate, percentage(2);UNICEF.DAT
+75;Length of stay on a psychiatric observation ward;336;3;binary(2), numeric;WARD.DAT
+76;Hodgkin's disease;538;2;categorical, nominal;HODGIGNS.DAT
+77;A Church Assembly vote;451;2;nominal(2);CHURCH.DAT
+78;A vandalized experiment;36;4;nominal, numeric(3);VANDAL.DAT
+79;Chest, waist and hips measurements;20;3;numeric(3);MEASURE.DAT
+80;Morsecode mistakes;10;10;confusion matrix;MORSE.DAT
+81;Distribution of minimum temperatures;3;1;rep(49)minima;MINTEMP.DAT
+82;Rat skeletal muscle;25;4;count(4);MUSCLE.DAT
+83;Ground cover under apple trees;48;4;nominal(2), numeric(2);APPLE.DAT
+84;Lung cancer and occupation;25;2;numeric(2);CANCER.DAT
+85;House insulation: Whitbum;15;2;binary, numeric;WHITBURN.DAT
+86;House insulation: Bristol;20;2;binary, numeric;BRISTOL.DAT
+87;Engine capacity and fuel consumption;9;2;numeric(2);ENGINE.DAT
+88;House insulation: Whiteside's data;1;113;rep(56) numeric(2), binary;INSULATE.DAT
+89;1981 coffee prices;15;1;numeric;COFFEE.DAT
+90;House temperatures: Neath Hili;15;2;numeric(2);TEMPERAT.DAT
+91;Sex differences at school;749;2;categorical, binary;SEX.DAT
+92;Destination of school leavers;115;2;categorical, numeric;SCHOOL.DAT
+93;House insulation: Pennyland;26;2;numeric, binary;PENNY.DAT
+94;Wave energy device mooring;18;2;numeric(2);WAVE.DAT
+95;The effect of light on mustard root growth;31;3;binary(2), numeric;MUSTARD.DAT
+96;Height and weight of 11-year-old girls;30;2;numeric(2);HEIGHT.DAT
+97;Consulting the doctor about a child;15;2;numeric, percentage;DOCTOR.DAT
+98;House heating: Great Linford;10;3;numeric(3);HEATING.DAT
+99;Births in Basel;1;12;rep(12) count;BASEL.DAT
+100;Homing in desert ants;20;2;binary, numeric;ANTS.DAT
+101;Homing in pigeons;18;2;binary, numeric;PIGEONS.DAT
+102;Breast cancer mortality and temperature;16;2;numeric, rate;BREAST.DAT
+103;Deaths from sport parachuting;5;4;rep(3) count, count;SPORT.DAT
+104;Cotton imports in the 18th century;1;31;rep(31) numeric;COTTON.DAT
+105;British exports in the 19th century;1;31;numeric;EXPORTS.DAT
+106;Size of ships in;1907;25;3 numeric, count, binary;SHIPSIZE.DAT
+107;Car sales in Quebec;1;108;rep(108) count;QUEBEC.DAT
+108;Sales and advertising;1;72;rep(36) numeric(2);SALES.DAT
+109;Canadian lynx trappings;1;114;rep(l14) count;LYNX.DAT
+110;Jet fighters;22;6;numeric(5), binary;JET.DAT
+111;Head size in brothers;25;4;numeric(4);HEADSIZE.DAT
+112;Sunspots;1;100;rep(100) count;SUNSPOTS.DAT
+113;Airline passenger numbers;1;144;rep(l44) count;AIRUNE.DAT
+114;Yields from a batch chemical process;1;70;rep(70) numeric;YIELDS.DAT
+115;Distances in Sheffield;20;2;numeric(2);DISTANCE.DAT
+116;University of Iowa enrolments;1;29;rep(29) count;IOWA.DAT
+117;Insects in dunes;33;1;count;DUNES.DAT
+118;Women's heights in Bangladesh;1243;1;numeric;WOMEN.DAT
+119;Size of families in California;1800;1;count;FAMILIES.DAT
+120;Hutterite population structure;1236;2;count(2);HUTTERIT.DAT
+121;Whooping cranes;35;2;count(2);CRANES.DAT
+122;Pork and cirrhosis;10;3;numeric(3);PORK.DAT
+123;Pet birds and lung cancer;429;2;binary(2);PETBIRDS.DAT
+124;Water injections and whiplash injuries;40;3;binary(3);WHIPLASH.DAT
+125;Telling cancer patients about their disease;27;14;count(7), proportion(7);QUESTION.DAT
+126;Diet and neural tube defects;367;2;categorical, binary;TUBE.DAT
+127;Age at marriage in Guatemala;90;1;numeric;MARRIAGE.DAT
+128;Sand-flies;521;3;binary, numeric(2);SANDFLY.DAT
+129;Tonsil size and carrier status;1398;2;binary, categorical;TONSIL.DAT
+130;Duration of pregnancy;1669;2;numeric, categorical;PREGNANT.DAT
+131;20 000 die throws;6;1;count;DIETHROW.DAT
+132;Iron in slag;53;2;numeric(2);IRON.DAT
+133;Lowering blood pressure during surgery;54;3;numeric(3);SURGERY.DAT
+134;Crime in the USA:;1960;47;14 numeric(l3), binary;USCRIME.DAT
+135;Prater's gasoline yields;32;5;numeric( 4), percentage;PRATER.DAT
+136;Strength of cables;108;2;nominal, numeric;CABLES.DAT
+137;Control of leatherjackets;72;3;nominal(2), numeric;CONTROL.DAT
+138;Spinning synthetic yarn;36;4;nominal(2), categorical,;YARN.DAT
+139;Forearm lengths;140;1;numeric;FOREARM.DAT
+140;Lifetime of electric lamps;300;1;numeric;LAMPS.DAT
+141;Computer failures;1;128;rep(128) count;COMPFAIL.DAT
+142;Replacement value of books;100;2;numeric(2);VALUE.DAT
+143;Sulphinpyrazone and heart attacks;1475;2;binary(2);ATTACKS.DAT
+144;Tibetan skulls;32;6;binary, numeric(5);TIBETAN.DAT
+145;East Midlands village dialects;25;25;matrix;DIALECT.DAT
+146;Lung cancer mortality;24;4;numeric, count(2), nominal;MORTAL.DAT
+147;Aphids;19;19;matrix;APHIDS.DAT
+148;Pit props;13;13;matrix;PITPROPS.DAT
+149;Silver content of Byzantine coins;27;2;nominal, percentage;SILVER.DAT
+150;Shoshoni American Indians;20;1;ratio;SHOSHONI.DAT
+151;Component lifetimes;20;1;numeric;LIFETIME.DAT
+152;Duckweed;2;9;rep(9) count;DUCKWEED.DAT
+153;Simulated polynomial regression data;21;3;numeric(3);SIMULATE.DAT
+154;Heights of elderly females;351;1;numeric;ELDERLY.DAT
+155;Etruscan and Italian skulls;154;2;binary, numeric;ETRUSCAN.DAT
+156;A random pattern screen;1000;1;count;PATTERN.DAT
+157;Rainfall in Australia;1;47;rep( 4 7) maxima;RAINFALL.DAT
+158;Scottish soldiers;5732;1;numeric;SOLDIERS.DAT
+159;Borrowing library books;114035;1;count;LIBRARY.DAT
+160;Nerve impulse times;1;799;rep(799) numeric;NERVE.DAT
+161;Corneal thickness of eyes;8;2;rep(2) numeric;CORNEAL.DAT
+162;Memory retention;1;26;rep(l3) numeric(2);MEMORY.DAT
+163;Student's yeast cell counts;1600;2;nominal, count;YEAST.DAT
+164;A comparison of growing conditions;24;2;nominal, numeric;GROWING.DAT
+165;Anacapa pelican eggs;65;2;numeric(2);PELICAN.DAT
+166;Steel ball bearings;20;2;binary, numeric;STEEL.DAT
+167;Murder rates;30;2;rep(2) numeric;MURDER.DAT
+168;Kulasekeva model;240;1;count;MODEL.DAT
+169;Epileptic seizures;422;1;count;EPILEPSY.DAT
+170;Red deer;78;2;numeric(2);REDDEER.DAT
+171;The incidence of albinism;209;2;count(2);ALBINISM.DAT
+172;Females in queues;100;1;count;QUEUES.DAT
+173;Student absenteeism;113;2;rep(2) count;STUDENT.DAT
+174;Leading digits;305;1;categorical;LEADING.DAT
+175;Spores of the fungus Sordaria;907;1;proportion;FUNGUS.DAT
+176;Litters of pigs;1961;2;count(2);LITTERS.DAT
+177;Shoots of Armeria maritima;100;1;count;SHOOTS.DAT
+178;American NFL matches;42;2;numeric(2);NFLMATCH.DAT
+179;Survival times in leukaemia;43;1;numeric;LEUKAEM.DAT
+180;Tensile strength;30;1;numeric;TENSILE.DAT
+181;Fatigue-life failures;22;1;numeric;FATIGUE.DAT
+182;Linked transmission failures;15;2;numeric(2);LINKED.DAT
+183;Published research papers in biology;1534;1;count;BIOLOGY.DAT
+184;Counting cockroaches;1;8;rep(4) count(2);ROACHES.DAT
+185;Survival times of green sunfish;40;2;binary, numeric;SUNFISH.DAT
+186;The great plague of;1665;1;18 rep(9) count(2);PLAGUE.DAT
+187;Log-series data;1469;1;count;LOG.DAT
+188;Eye and hair colour in children;27748;3;nomina1(2), binary;EYE.DAT
+189;Suicide figures in prisons;1;12;rep(6) count(2);PRISON.DAT
+190;Counting beetles;16;4;categorical(2), nominal, count;BEETLES.DAT
+191;The number of words in a sentence;600;1;count;WORDS.DAT
+192;The size of gangs;895;1;count;GANGS.DAT
+193;Skin graft survival times;11;3;rep(2) numeric, binary;GRAFT.DAT
+194;Angles of spiders' webs;10;1;numeric;WEBS.DAT
+195;Finger length;3000;1;numeric;FINGER.DAT
+196;The Charlier model;7640;1;count;CHARLIER.DAT
+197;Disease clusters;1;62;rep(62) count;CLUSTERS.DAT
+198;Multiple sclerosis;43;4;binary(2), numeric(2);MS.DAT
+199;The number of pigs in a litter;378;1;count;PIGS.DAT
+200;The lengths of scallops;222;1;numeric;SCALLOPS.DAT
+201;Smoking habits in children;1;37;rep(4) count(9), binary;SMOKING.DAT
+202;The genesis of the t-test;10;2;numeric(2);TTEST.DAT
+203;Dimensions of cuckoos' eggs;243;1;numeric;CUCKOOS.DAT
+204;Time intervals between coal mining disasters;1;190;rep(190) count;COAL.DAT
+205;Ticks on sheep;82;1;count;TICKS.DAT
+206;Brownlee's stack loss data;1;84;rep(21) numeric(4);BROWNLEE.DAT
+207;Heine-Euler extensions;100;1;count;HEINE.DAT
+208;Compound normal distributions;250;1;numeric;COMPOUND.DAT
+209;Accident-repeatedness among children;621;2;count(2);ACCIDENT.DAT
+210;Volume of black cherry trees;31;3;numeric(3);CHERRY.DAT
+211;Digits count in pi and e;10000;1;nominal;COUNTS.DAT
+212;Drug content of rat livers;19;4;numeric(4);DRUG.DAT
+213;Envelope usage;311;1;count;ENVELOPE.DAT
+214;American Psychological Association election data;5738;5;rank(5);ELECTION.DAT
+215;Distribution of seabirds;10;4;count(4);SEABIRDS.DAT
+216;Spermarche;40;31;numeric(3), rep(27) binary, count;SPERM.DAT
+217;Capture experiments;36;9;binary, categorical, numeric, rep(6) binary;CAPTURE.DAT
+218;Unaided distance vision;7477;2;rep(2) categorical;VISION.DAT
+219;Dental records;27;5;binary, rep(4) numeric;DENTAL.DAT
+220;Nigerian smallpox data;1;29;rep(29) count;SMALLPOX.DAT
+221;Disease lesions in wheat;143;2;numeric(2);LESIONS.DAT
+222;Measuring drug diffusion;100;4;categorical(3), numeric;DIFFUSE.DAT
+223;Judgement concordance;142;2;categorical(2);JUDGE.DAT
+224;Bird colouring;90;3;categorical(3);COLOUR.DAT
+225;Incidence and mortality for lung cancer;507;3;numeric(2), binary;INCIDENT.DAT
+226;Bump-hunting;25752;1;numeric;BUMP.DAT
+227;'Bliss' data sets;150;1;count;BLISS.DAT
+228;Bird survival;50;5;numeric(3), binary(2);BIRD.DAT
+229;Trailing digits in data;4000;1;nominal;TRAILING.DAT
+230;Silica in meteors;22;1;percentage;SILICA.DAT
+231;Husbands and wives;200;5;rep(2) numeric(2), numeric;HUSBANDS.DAT
+232;Presurgical stress;19;2;rep(2) numeric;STRESS.DAT
+233;Bladder cancer study;82;13;binary, rep(12) count;BLADDER.DAT
+234;Interspike waiting times;1;100;rep(100) numeric;WAITING.DAT
+235;Traftic flow;349;1;numeric;TRAFFIC.DAT
+236;Waiting times for planned pregnancies;678;2;binary, count;PLANNED.DAT
+237;Iowa soil samples;18;3;numeric(3);SAMPLES.DAT
+238;Greenland turbot;68;7;numeric, rep(6) count;TURBOT.DAT
+239;Insect data;30;4;nominal, numeric(3);INSECT.DAT
+240;Skin resistance;16;5;rep(5) numeric;RESIST.DAT
+241;Energy maintenance in sheep;64;2;numeric(2);ENERGY.DAT
+242;Lengths of lives of rats;195;2;binary, numeric;RATUVES.DAT
+243;Crying babies;18;3;county(2), binary;CRYING.DAT
+244;Plant competition data;147;4;nominal, numeric(3);PLANT.DAT
+245;Product sales;1;300;rep(300) count;PRODUCT.DAT
+246;Timher data;50;3;numeric(3);TIMBER.DAT
+247;Parasite data;70;4;binary, numeric, count(2);PARASITE.DAT
+248;Azimuth data;18;1;numeric;AZIMUTH.DAT
+249;Perpendicular distance models;164;1;numeric;PERPEND.DAT
+250;Japanese black pines;204;2;numeric(2);PINES.DAT
+251;Treatments for locally unresectable gastric cancer;90;3;binary(2), numeric;GASTRIC.DAT
+252;Strength of beams;10;3;numeric(3);BEAMS.DAT
+253;Salinity values;30;2;nominal, numeric;SALINITY.DAT
+254;Epileptic seizures and chemotherapy;59;7;binary, rep(4) count, count(2);CHEMO.DAT
+255;Period between earthquakes;1;62;rep(62) count;QUAKES.DAT
+256;Alveolar-bronchiolar adenomas;23;2;proportion, count;ALVEOLAR.DAT
+257;Woodlice;37;1;count;WOODLICE.DAT
+258;Drilling times;6;161;binary, rep(80) numeric(2);DRILLING.DAT
+259;Failure data;1;27;rep(9) (rep(2) numeric, count);FAILURE.DAT
+260;Spatial presence-absence data;24;24;matrix binary;SPATIAL.DAT
+261;Neuralgia data;18;5;binary(3), numeric(2);NEURAL.DAT
+262;Temperatures in America;56;3;minimum, numeric(2);USTEMP.DAT
+263;Weldon's dice data - (currently) the last word;26306;1;count;WELDON.DAT
+264;Putting computers to the test;16;13;numeric(13);TEST.DAT
+265;Assessing the effects of toxicity;40;2;categorical, numeric;TOXICITY.DAT
+266;Testing homogeneity;11;2;binary, count;HOMOGEN.DAT
+267;Random digits;6;10;counts(1O);DIGITS.DAT
+268;Ice cream consumption;1;120;rep(30) numeric(4);ICECREAM.DAT
+269;Hospital data;12;4;numeric(3), count;HOSPITAL.DAT
+270;Aquifer data;85;3;numeric(3);AQUIFER.DAT
+271;Windmill data;25;2;numeric(2);WINDMILL.DAT
+272;Examination times and scores;134;2;numeric(2);EXAM.DAT
+273;Gamma irradiation;12;2;numeric(2);GAMMA.DAT
+274;Ramus heights;20;4;rep( 4) numeric;RAMUS.DAT
+275;A soil experiment;21;3;nominal(2), numeric;SOIL.DAT
+276;Rabit foetuses;24;3;binary, count(3);RABBIT.DAT
+277;Blood fat concentration;371;3;binary, numeric(2);BLOODFAT.DAT
+278;Snowfall data;63;1;numeric;SNOWFALL.DAT
+279;Counting alpha-particles;2608;1;count;COUNTING.DAT
+280;Eruptions of the Old Faithful geyser;299;1;numeric;GEYSER.DAT
+281;Starch films;94;3;nominal, numeric(2);STARCH.DAT
+282;Sheep diet;16;7;nominal(2), numeric, rep(4);SHEEP.DAT
+283;Horse-kicks;196;1;count;KICKS.DAT
+284;Pneumonia risk in smokers with chickenpox;7;2;rep(2) numeric;SMOKERS.DAT
+285;Anorexia data;63;3;nominal, rep(2) numeric;ANOREXIA.DAT
+286;Breast development of Turkish girls;318;2;categorical(2);TURKISH.DAT
+287;Treatment of enuresis;29;3;binary, rep(2) count;ENURESIS.DAT
+288;Births in the USA;53;3;nominal, rep(2) percentage;BIRTHS.DAT
+289;Flying bomb hits on London during World War II;576;1;count;BOMB.DAT
+290;Brain and body weights of animals;28;2;numeric(2);BRAIN.DAT
+291;Severe Ideopathic Respiratory Distress Syndrome;50;2;binary, numeric;DISTRESS.DAT
+292;Lowest temperatures for US cities;22;4;rep(4) numeric;LOWEST.DAT
+293;Plasma citrate concentrations;10;5;rep(5) numeric;PLASMA.DAT
+294;Voting in congress;15;15;matrix;CONGRESS.DAT
+295;Cortisol Ievels in psychotics;71;2;nominal, numeric;CORTISOL.DAT
+296;An historic data set: crime and drinking;1426;2;binary, nominal;HISTORIC.DAT
+297;Depression in adolescents;465;4;numeric, binary(3);DEPRESS.DAT
+298;English and Greek teachers;32;2;rep(2) numeric;TEACHERS.DAT
+299;Fun runners;33;2;nominal, numeric;FUN.DAT
+300;Olympic jumping events;1;84;rep(21) numeric(4);JUMPING.DAT
+301;Blood lactic acid;20;2;numeric(2);LACTIC.DAT
+302;Skin cancers;15;4;binary, numeric, count(2);SKIN.DAT
+303;Mental status of school-age children;1600;2;categorical(2);MENTAL.DAT
+304;Diabetic mice;57;2;nominal, numeric;DIABETIC.DAT
+305;Absorption of ions by potato;5;3;numeric(3);POTATO.DAT
+306;Survival of cancer patients;25;3;binary(2), numeric;SURVIVAL.DAT
+307;Major earthquakes since 1900: fatalities and intensities;1;40;rep(20) (numeric, count);EARTH.DAT
+308;Presidents, popes and monarchs;66;2;nominal, numeric;MONARCH.DAT
+309;Cervical cancer;366;2;binary(2);CERVICAL.DAT
+310;Sickle cell disease;41;2;nominal, numeric;SICKLE.DAT
+311;Men's olympic sprint times;1;100;rep(20) maxima(5);SPRINT.DAT
+312;Women's olympic swimming;1;28;rep(7) maxima(14);SWIMMING.DAT
+313;A thrombosis study;24;2;binary, numeric;THROMBOS.DAT
+314;Deaths in USA in;1966;1;12 rep(12) count;DEATH.DAT
+315;Comparison of experimental method;315;2;binary(2);COMPARE.DAT
+316;Bat-to-prey detection distances;11;3;numeric(2), binary;BAT.DAT
+317;Sexual performance of castrated mice;3;7;count(7);CASTRATE.DAT
+318;The cloud point of a liquid;19;2;percentage, numeric;LIQUID.DAT
+319;Romano-British pottery;26;6;nominal, percentage(5);POTTERY.DAT
+320;A split plot field trial;72;4;nominal(2), numeric(2);SPLIT.DAT
+321;Olympic triple jump distances;21;1;maximum;TRIPLE.DAT
+322;Species of flea beetle;74;3;nominal, numeric(2);FLEA.DAT
+323;Survival times of cancer patients;64;2;nominal, numeric;PATIENT.DAT
+324;Birthweights of Poland China pigs;56;2;nominal, numeric;POLAND.DAT
+325;Performance of various computer CPUs;209;8;numeric(6), count(2);COMPUTER.DAT
+326;Monthly deaths from lung diseases in the UK;1;72;count;MONTHLY.DAT
+327;Convictions for drunkenness;947;2;numeric, binary;DRUNK.DAT
+328;Ear infections in swimmers;287;5;binary(3), ordinal, count;EAR.DAT
+329;A perception experiment;24;3;numeric(2), binary;PERCEPT.DAT
+330;Boiling points in the Alps;17;2;numeric(2);ALPS.DAT
+331;Remission times of leukaemia patients;42;3;numeric, binary(2);REMISS.DAT
+332;Foster feeding rats of different genotype;61;3;nominal(2), numeric;FOSTER.DAT
+333;Record times for Scottish hill races;35;3;numeric(3);HILLRACE.DAT
+334;Hardness of timher;36;2;numeric(2);HARDNESS.DAT
+335;Dimensions of jellyfish;46;3;binary, numeric(2);JELLY.DAT
+336;Malaria parasites;50000;1;count;MALARIA.DAT
+337;The New York Choral Society;107;2;nominal, numeric;CHORAL.DAT
+338;Testing crash helmets;1;266;rep(133) numeric(2);HELMETS.DAT
+339;The speed of light;100;3;numeric, nominal(2);LIGHT.DAT
+340;Murder-suicides through aircraft crashes;17;2;numeric, count;AIRCRAFT.DAT
+341;Average monthly temperatures for Nottingham, 1920-1939;1;240;rep(240) numeric;NOTTS.DAT
+342;Insurance premiums;23;4;binary(2), numeric(2);PREMIUM.DAT
+343;Testing authorship;19220;2;binary, count;AUTHOR.DAT
+344;The rise of the planet Venus;14;3;numeric(3);VENUS.DAT
+345;Pulse rates of Peruvian Indians;39;1;numeric;PULSE.DAT
+346;Vocabulary of children;10;2;numeric(2);VOCAB.DAT
+347;Educating cats;13;2;count, numeric;CATS.DAT
+348;Shocking rats;16;2;count, numeric;SHOCKING.DAT
+349;Smoking habits;20;3;categorical, nominal, proportion;HABITS.DAT
+350;Mothers of schizophrenics;40;2;binary, count;MOTHERS.DAT
+351;Unemployment and suicide rates;11;2;percentage, rate;UNEMPLOY.DAT
+352;Main US budget items for 1978 and;1979;8;2 rep(2) numeric;BUDGET.DAT
+353;Damage to ships;81;5;nominal, categorical, binary,;SHIPS.DAT
+354;Methadone treatment of heroin addicts;266;5;binary(3), numeric(2);HEROIN.DAT
+355;Smoking and motherhood;6851;4;binary(4);SMOKEMUM.DAT
+356;Crime rates in the USA;50;7;rate(7);CRIME.DAT
+357;Olympic decathlon,;1988;34;11 maxima(11);OLYMPIC.DAT
+358;Measurements of dog mandibles;7;6;numeric(6);MANDIBLE.DAT
+359;Children with Down's syndrome;7;3;numeric, count(2);CHILDREN.DAT
+360;Protein consumption in European countries;25;9;numeric(9);PROTEIN.DAT
+361;Male Egyptian skulls;150;5;numeric(5);SKULLS.DAT
+362;Olympic women's heptathlon;1988;25;8 numeric(8);HEPTATH.DAT
+363;Percentages employed in different industries in Europe;26;9;percentage(9);EUROPE.DAT
+364;Ages at death of English rulers;42;1;numeric;RULERS.DAT
+365;Deaths in coal mining disasters;166;1;count;MINING.DAT
+366;A study in obesity;583;2;categorical, binary;OBESITY.DAT
+367;The starduster CYG OB1;47;2;numeric(2);STAR.DAT
+368;Frequency of breast self-examination;1216;2;numeric, categorical;SELFEXAM.DAT
+369;Annual wages of production line workers in the USA;30;1;numeric;WORKERS.DAT
+370;One way to kill a cat;41;2;numeric(2);KILL.DAT
+371;Viral lesions on tobacco leaves;8;2;rep(2) count;TOBACCO.DAT
+372;Finger ridges of identical twins;12;2;rep(2) count;TWINS.DAT
+373;Statures of brother and sister;11;2;rep(2) numeric;STATURES.DAT
+374;Candidates in the 1992 British Election;11;10;count(IO);BRITISH.DAT
+375;Papers presented at the first ten ICPRs;10;10;rep(10) count;PAPERS.DAT
+376;Body mass index data;20;3;numeric(3);BODYMASS.DAT
+377;Citation rates;26;1;count;CITATION.DAT
+378;A World Heavyweight Boxing Championship match;1;36;binary, rep(5) count(7);BOXING.DAT
+379;Assessment of conference papers;30;8;rank(8);CONF.DAT
+380;Clinical trial for sprains;46;4;rep( 4) categorical;SPRAINS.DAT
+381;Jeans sales in the UK;1;72;rep(72) numeric;JEANS.DAT
+382;The thirteen most common psychiatric disorders in the UK;22;13;numeric(l3);DISORDER.DAT
+383;Randomized experiment on tomato yield;11;3;binary, numeric, categorical;TOMYIELD.DAT
+384;Screening for psychiatric disorder;40;26;binary(26);SCREEN.DAT
+385;Salaries in different occupations;144;2;binary, numeric;SALARIES.DAT
+386;Whisky prices;42;2;binary, numeric;WHISKY.DAT
+387;1992 London Marathon;100;2;binary, numeric;MARATHON.DAT
+388;Predicting cervical cancer;30;2;categorical(2);PREDICT.DAT
+389;Treatments for head and neck cancer;96;3;binary, numeric;HEADNECK.DAT
+390;Tau particle decay;13;2;numeric(2);TAU.DAT
+391;Factors influencing depression;419;3;binary(3);FACTORS.DAT
+392;Vocabulary scores of university students;54;1;numeric;UNIV.DAT
+393;Two groups drug comparison;5;5;binary, rep(4) numeric;GROUPS.DAT
+394;Blood glucose levels;6;60;rep(60) numeric;GLUCOSE.DAT
+395;Rat body weights with diet supplements;16;12;nominal, rep(11) numeric;RATBODY.DAT
+396;Diet supplements;15;7;nominal, rep(6) numeric;DIET.DAT
+397;Visual acuity and lens strength;7;8;rep(4) numeric(2);VISUAL.DAT
+398;Plasma ascorbic acid levels in hospital patients;12;7;rep(7) numeric;ASCORBIC.DAT
+399;Salsolinol excretion rates;14;5;binary, rep(4) numeric;EXCRETE.DAT
+400;Response proflies to three drugs;46;3;binary(3);RESPONSE.DAT
+401;Patterns of psychotropic drug consumption;5773;5;binary(3), numeric(2);PSYCHO.DAT
+402;Wool data;27;4;binary(3), numeric;WOOL.DAT
+403;Survival times of animals;48;3;nominal(2), numeric;ANIMALS.DAT
+404;Effectiveness of slimming clinics;34;3;binary(2), numeric;SLIMMING.DAT
+405;Prevalence of vertebral fractures;1005;2;binary, numeric;FRACTURE.DAT
+406;Agreement between two examination markers;29;2;categorical(2);MARKERS.DAT
+407;Subjective estimates of lengths of pieces of string;15;4;numeric(4);STRING.DAT
+408;Comparison of two kitchen scales;19;2;numeric(2);SCALES.DAT
+409;Performance in mathematical degrees by sex in England and Scotland;7115;3;binary(2), categorical;DEGREES.DAT
+410;Chemical process;24;3;numeric(2), percentage;CHEMICAL.DAT
+411;Carcinoma of the uterine cervix;118;7;categorical(7);UTERINE.DAT
+412;Rainfall in Minneapolis/St Paul;1;30;numeric;MINN.DAT
+413;Book condition by strength of paper;840;2;categorical(2);BOOK.DAT
+414;Oxford and Cambridge boat race crews;18;2;binary, numeric;BOATRACE.DAT
+415;Comparisons between 48 major cities in;1991;48;3 numeric(3);CITIES.DAT
+416;Height and resting pulse measurements for a sample of hospital patients;50;2;numeric(2);RESTING.DAT
+417;Coalminers' breathing difficulties;17232;3;binary(2), numeric;COALMINE.DAT
+418;Toxicity of potassium cyanate on trout eggs;48;4;numeric, binary, count(2);TROUT.DAT
+419;Asthma death, corticosteroid use, and fenoterol use;585;3;binary(3);ASTHMA.DAT
+420;Seed germination;1255;3;binary(3);SEED.DAT
+421;Depression and friendship amongst children;49;3;binary(3);FRIENDS.DAT
+422;Social class of fathers and sons;845;2;categorical(2);SOCIAL.DAT
+423;Survival data for patients with chronic active hepatitis;44;2;numeric, binary;CHRONIC.DAT
+424;Survival times of leukaemia patients;33;3;binary, numeric(2);LEUKWBC.DAT
+425;Dissimilarity ratings of World War II politicians;12;12;matrix;POUTICS.DAT
+426;Rate of formation of a chemical impurity;6;3;numeric(3);IMPURITY.DAT
+427;Road distances between major UK towns;23;23;matrix;ROAD.DAT
+428;Penicillin manufacture;20;4;categorical, nominal(2), numeric;PENICILL.DAT
+429;Early detection of autism;2;13;percentage(l3);AUTISM.DAT
+430;Adolescent attempted suicide rates;20;4;numeric, binary, counts(2);AOOLESCE.DAT
+431;Lung cancer cases and person-years experience by age and period of diagnosis;140;5;numeric(2), binary(2), count;DIAGNOSE.DAT
+432;Yields of wheat;13;4;numeric(4);HARVEST.DAT
+433;Estimating numbers of unobserved species;14;10;count(lO);SPECIES.DAT
+434;Distance and direction travelled by blue periwinkles;31;2;numeric(2);PERIWINK.DAT
+435;Birth season and psychosis;12;3;counts(2), percentage;SEASON.DAT
+436;Psychotropic drug use by sex, age, and physical illness;1307;4;binary(3), categorical;PHYSICAL.DAT
+437;Mouse Iymphoma mutation;24;3;binary, numeric(2);MOUSE.DAT
+438;Stopping distance;63;2;numeric(2);STOPPING.DAT
+439;Decontaminants for M. bovis;129;3;nominal, numeric(2);MBOVIS.DAT
+440;Breast cancer and ambulatory status over time;37;7;rep(7) categorical;AMBULAT.DAT
+441;Numbers of icebergs sighted;1;24;rep(12) count(2);ICEBERG.DAT
+442;Ratings of synchronized swimming;40;5;numeric(S);SYNCHRO.DAT
+443;Numbers of revertant colanies of T A98 Salmonella;3;12;rep(6) (numeric, count);COLONIES.DAT
+444;Landsat multi-spectral scanner data;3;12;numeric(12);LANDSAT.DAT
+445;Effectiveness of insecticides;20;5;nominal, numeric(2),;EFFECT.DAT
+446;Strengths of glass fibres;63;1;numeric(1);GLASS.DAT
+447;Psychoactive drug use;13;13;matrix;DRUGUSE.DAT
+448;Estimated abdominal disease diagnosis;50;4;nominal, probability(3);ABDOMEN.DAT
+449;Statistics examination results;10;14;percentage( 14);STATS.DAT
+450;Eight variables measured on female psychiatric patients;118;8;numeric(3), categorical(2), binary(3);FEMALE.DAT
+451;Suicide thoughts;295;2;categorical(2);THOUGHTS.DAT
+452;Similarities between eight offences;8;8;matrix;OFFENCES.DAT
+453;Language abilities;12;12;matrix;LANGUAGE.DAT
+454;Heat evolved by setting cement;13;5;percentage(4), numeric;SETTING.DAT
+455;Quality control in bread baking;29;10;categorical( 6), numeric( 4);BREAD.DAT
+456;Death rates from heart disease among doctors;20;4;binary(2), count, numeric;DISEASE.DAT
+457;Renal transplant data;148;3;numeric, binary, count;RENAL.DAT
+458;Strengths of welds in high density polyethylene;34;5;numeric(S);WELDS.DAT
+459;Subjective health assessment in 5 regions;5855;2;nominal, categorical;ASSESS.DAT
+460;AIDS incidence data for the USA;1;26;rep(26) count;AIDS.DAT
+461;Stock recruitment of Skeena River sockeye salmon;1;28;rep(28) count(2);SALMON.DAT
+462;Tumour response to chemotherapy;299;3;binary(2), categorical;TUMOUR.DAT
+463;Cervical cancer deaths in four European countries;4;3;numeric, count(2);COUNTRY.DAT
+464;Performance of a credit scoring instrument;22;5;numeric, percentage(4);CREDIT.DAT
+465;Weights of mice;13;7;rep(7) numeric;MICE.DAT
+466;Poisson random variate generation;60;4;binary, nominal, numeric(2);POISSON.DAT
+467;Survival times of gastric cancer patients;90;3;binary(2), numeric;TIME.DAT
+468;Time for assays to register HIV positivity;47;6;binary(2), rep(4) counts;HIV.DAT
+469;Mean daily SIDS deaths by temperature;10;4;numeric(3), count;MEAN.DAT
+470;Number of SIDS deaths per day;242;2;count, numeric;SIDS.DAT
+471;Predicting benefit from group psychotherapy;64;3;binary, rep(2) categorical;BENEFIT.DAT
+472;African statisticians in;1977;48;3 count(3);AFRICAN.DAT
+473;Railway accidents on British Rail, 1970-83;1;84;rep(14) (count(5), numeric);RAILWAY.DAT
+474;Australian higher education students, 1981 to;1988;8;24 rep(8) (numeric, binary, count);EDUCATE.DAT
+475;Contents of books on multivariate analysis;20;7;count(7);CONTENTS.DAT
+476;Age of menarche in Polish girls;25;3;numeric, count, proportion;POLISH.DAT
+477;Level of Lake Victoria Nyanza and numbers of sunspots;1;40;rep(20) (numeric, count);LAKE.DAT
+478;Surgical deaths;40;5;numeric, binary(2), count(2);SURGICAL.DAT
+479;Mean monthly temperature at various altitudes;14;24;rep(12) numeric(2);ALTITUDE.DAT
+480;Aircraft air-conditioning systems failures;12;30;rep(30) numeric;SYSTEMS.DAT
+481;Fernale age distribution in Mexico in;1960;75;2 numeric, count;MEXICO.DAT
+482;Volume of hens' eggs;12;3;numeric(3);EGGS.DAT
+483;Smoking and health;36;4;numeric, nominal, count(2);HEALTH.DAT
+484;Herniorrhaphy;32;9;numeric(2), binary(2), categorical(5);HERNIOR.DAT
+485;Birthweight by gestational age;23;4;numeric(3), count;AGE.DAT
+486;Underdispersed word count data;100;1;count;UNDER.DAT
+487;Red core disease in strawberries;144;5;categorical(2), nominal(2), count;REDCORE.DAT
+488;Failure times for a piece of electronic equipment;107;1;numeric;EQUIP.DAT
+489;Survival time of patients with lymphocytic non-Hodgkin's lymphoma;38;3;binary(2), numeric;LYMPHOMA.DAT
+490;Prestige, income, education, and suicide rates for 36 occupations;36;4;categorical, rate, numeric(2);PRESTIGE.DAT
+491;Natural scientists and engineers in the US;1;16;rep(8) count(2);ENGINEER.DAT
+492;Correlation between nine Statements about pain;9;9;matrix;PAIN.DAT
+493;Manufacture of truck leaf springs;16;7;binary(5), numeric(2);TRUCK.DAT
+494;Housing satisfaction around Montevideo, Minnesota;35;4;binary, count(3);HOUSING.DAT
+495;Car changing patterns;16;16;matrix;CAR.DAT
+496;In vitro chromosome aberration assays;9;4;binary, numeric, count(2);INVITRO.DAT
+497;Visits to dentist;10218;1;count;VISITS.DAT
+498;Myocardial infarction and obesity, smoking and vasectomy;36;4;binary(4);MYOCARD.DAT
+499;Specific heat of water at various temperatures;6;12;rep(6) numeric(2);HEAT.DAT
+500;Numbers of packets of cereal purchased over 13 weeks;2000;1;count;CEREAL.DAT
+501;Accelerated life tests on electrical insulation;40;3;numeric(2), binary;ELECTRIC.DAT
+502;Cardiac oxygen consumption and mechanical function;11;6;binary, numeric(5);OXYGEN.DAT
+503;Coffee consumption and coronary heart disease;1718;2;binary(2);CONSUME.DAT
+504;Strength of sheet metal;32;6;binary(5), numeric;METAL.DAT
+505;Mortality from testicular cancer in England and Wales;13;22;rep(ll) (numeric, rate);TESTICLE.DAT
+506;Fathers' and sons' occupations;14;14;counts(14);FATHERS.DAT
+507;Numbers of purchases of toilet tissue;1816;2;nominal, count;TISSUE.DAT
+508;Haematology of paint sprayers;103;6;numeric(6);PAINT.DAT
+509;Measurement of protein content in ground wheat;24;7;percentage, number(6);GROUND.DAT
+510;Winning times in men's running events;17;5;maxima( 4), numeric;WINNING.DAT
