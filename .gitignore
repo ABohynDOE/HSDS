@@ -5,3 +5,5 @@
 docs
 
 /.quarto/
+data/.DS_Store
+inst/.DS_Store
