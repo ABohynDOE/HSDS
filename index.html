@@ -269,21 +269,6 @@ This function sets up all the necessary files for processing a new dataset. When
 </ul>
 </li>
 </ol>
-<pre class="mermaid"><code>%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#009E73',
-      'primaryTextColor': '#000000',
-      'secondaryColor': '#56B4E9'
-    }
-  }
-}%%
-
-flowchart LR
-    A("data_setup(data)") --&gt;|Example of Usage| B(inst/examples/data.R)
-    A --&gt;|Processing Script| C(data-raw/data.R)
-    A --&gt;|Documentation| D(R/data.R)</code></pre>
 <p>When contributing, please also follow these guidelines:</p>
 <ul>
 <li><p><strong>Dataset Naming</strong><br>
