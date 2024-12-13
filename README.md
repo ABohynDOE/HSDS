@@ -138,24 +138,6 @@ functions:
     - **`data-raw/`**: Includes a script to process the raw dataset.
     - **`R/`**: Documents the dataset for use in the package.
 
-``` mermaid
-%%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#009E73',
-      'primaryTextColor': '#000000',
-      'secondaryColor': '#56B4E9'
-    }
-  }
-}%%
-
-flowchart LR
-    A("data_setup(data)") -->|Example of Usage| B(inst/examples/data.R)
-    A -->|Processing Script| C(data-raw/data.R)
-    A -->|Documentation| D(R/data.R)
-```
-
 When contributing, please also follow these guidelines:
 
 - **Dataset Naming**  
