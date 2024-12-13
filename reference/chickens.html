@@ -62,20 +62,20 @@ the same block.</p>
     <p>A data frame with 24 rows and 3 columns:</p><dl><dt>block</dt>
 <dd><p>Block corresponding to a bird house</p></dd>
 
-  <dt>dose</dt>
-<dd><p>Dose of drug added to the diet (`control`, `low` or `high`)</p></dd>
+<dt>dose</dt>
+<dd><p>Dose of drug added to the diet (<code>control</code>, <code>low</code> or <code>high</code>)</p></dd>
 
-  <dt>weight</dt>
+<dt>weight</dt>
 <dd><p>Average weight per bird (in pounds) at maturity for the group
-  of birds in each experimental unit</p></dd>
+of birds in each experimental unit</p></dd>
 
 
 </dl></div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
     <p>Snee, R.D. (1985) <em>Graphical display of results of
-  three-treatment randomized block experiments</em>. Applied Statistics, 34,
-  71-7.</p>
+three-treatment randomized block experiments</em>. Applied Statistics, 34,
+71-7.</p>
     </div>
 
     <div class="section level2">
@@ -83,7 +83,7 @@ the same block.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://abohyndoe.github.io/HSDS/">hsds</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/lme4/lme4/" class="external-link">lme4</a></span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in library(lme4):</span> there is no package called ‘lme4’</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: Matrix</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Plot of the average weight per diet, on top of a box plot</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">chickens</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">dose</span>, y <span class="op">=</span> <span class="va">weight</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
@@ -95,10 +95,34 @@ the same block.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Model of the weight by dose, taking into account the random variation within</span></span></span>
 <span class="r-in"><span><span class="co"># each individual unit</span></span></span>
-<span class="r-in"><span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu">lmer</span><span class="op">(</span><span class="va">weight</span> <span class="op">~</span> <span class="va">dose</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">block</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">chickens</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in lmer(weight ~ dose + (1 | block), data = chickens):</span> could not find function "lmer"</span>
+<span class="r-in"><span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">weight</span> <span class="op">~</span> <span class="va">dose</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">block</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">chickens</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'mod' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Linear mixed model fit by REML ['lmerMod']</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Formula: weight ~ dose + (1 | block)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    Data: chickens</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> REML criterion at convergence: -43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Scaled residuals: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      Min       1Q   Median       3Q      Max </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> -1.59348 -0.62704 -0.02187  0.75035  1.42969 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Random effects:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Groups   Name        Variance Std.Dev.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  block    (Intercept) 0.000994 0.03153 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Residual             0.004765 0.06903 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Number of obs: 24, groups:  block, 8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Fixed effects:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             Estimate Std. Error t value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept)  3.86625    0.02683 144.100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> doselow      0.13875    0.03451   4.020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> dosehigh     0.17125    0.03451   4.962</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Correlation of Fixed Effects:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          (Intr) doselw</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> doselow  -0.643       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> dosehigh -0.643  0.500</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># The `modelbased` package is great to estimate marginal means</span></span></span>
 <span class="r-in"><span><span class="fu">modelbased</span><span class="fu">::</span><span class="fu">estimate_means</span><span class="op">(</span><span class="va">mod</span>, at <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dose"</span><span class="op">)</span><span class="op">)</span></span></span>

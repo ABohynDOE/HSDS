@@ -83,22 +83,22 @@ drowsiness).</p>
     <p>A data frame with 27 rows and 4 columns:</p><dl><dt>subject</dt>
 <dd><p>subject ID</p></dd>
 
-  <dt>day</dt>
+<dt>day</dt>
 <dd><p>Day of the experiment</p></dd>
 
-  <dt>frequency</dt>
+<dt>frequency</dt>
 <dd><p>Flicker frequency</p></dd>
 
-  <dt>treatment</dt>
-<dd><p>Anti-histaminic treatment given, one of `meclastine`, `placebo`, or `promethazine`</p></dd>
+<dt>treatment</dt>
+<dd><p>Anti-histaminic treatment given, one of <code>meclastine</code>, <code>placebo</code>, or <code>promethazine</code></p></dd>
 
 
 </dl></div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
     <p>Hedges, A., Hills, M., Maclay, W.P., Newman-Taylor, A.J. and Turner,
-  P. (1971) <em>Some central and peripheral effects of meclastine, a new
-  antihistaminic drug</em>, in man. Journal of Clinical Pharmacology, 2, 112-119</p>
+P. (1971) <em>Some central and peripheral effects of meclastine, a new
+antihistaminic drug</em>, in man. Journal of Clinical Pharmacology, 2, 112-119</p>
     </div>
 
     <div class="section level2">
@@ -129,8 +129,7 @@ drowsiness).</p>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in ggplot_add(object, p, objectname):</span> Can't add `p_treat` to a <span style="color: #0000BB;">&lt;ggplot&gt;</span> object.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Mixed model with random effects for day and subject</span></span></span>
-<span class="r-in"><span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu">lmer</span><span class="op">(</span><span class="va">frequency</span> <span class="op">~</span> <span class="va">treatment</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">subject</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">day</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">flicker</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in lmer(frequency ~ treatment + (1 | subject) + (1 | day), data = flicker):</span> could not find function "lmer"</span>
+<span class="r-in"><span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lme4/man/lmer.html" class="external-link">lmer</a></span><span class="op">(</span><span class="va">frequency</span> <span class="op">~</span> <span class="va">treatment</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">subject</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">day</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">flicker</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Plot of the marginal means per treatment, using the `modelbased` package</span></span></span>
 <span class="r-in"><span><span class="fu">modelbased</span><span class="fu">::</span><span class="fu">estimate_means</span><span class="op">(</span><span class="va">mod</span>, at <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"treatment"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>

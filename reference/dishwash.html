@@ -71,10 +71,10 @@ size three, a balanced incomplete block design was used.</p>
     <p>A data frame with 36 rows and 3 columns:</p><dl><dt>block</dt>
 <dd><p>Washing up session. Factor with levels '1' to '12'</p></dd>
 
-  <dt>detergent</dt>
+<dt>detergent</dt>
 <dd><p>Detergent brand. Factor with levels '1' to '9'</p></dd>
 
-  <dt>plates</dt>
+<dt>plates</dt>
 <dd><p>Number of plates washed until the foam disappeared</p></dd>
 
 
@@ -82,7 +82,7 @@ size three, a balanced incomplete block design was used.</p>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
     <p>John, P.W.M. (1961) <em>An application of a balanced incomplete
-  block design</em>, Technometrics, 3, 51-54.</p>
+block design</em>, Technometrics, 3, 51-54.</p>
     </div>
 
     <div class="section level2">
@@ -98,7 +98,7 @@ size three, a balanced incomplete block design was used.</p>
 <span class="r-in"><span><span class="co"># Generate all possible cases of detergent and block, then add the recorded</span></span></span>
 <span class="r-in"><span><span class="co"># values from the experiment</span></span></span>
 <span class="r-in"><span><span class="va">all_cases</span> <span class="op">&lt;-</span> <span class="va">dishwash</span> <span class="op">%&gt;%</span></span></span>
-<span class="r-in"><span>  <span class="fu">expand</span><span class="op">(</span><span class="va">block</span>, <span class="va">detergent</span><span class="op">)</span> <span class="op">%&gt;%</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/Matrix/man/expand-methods.html" class="external-link">expand</a></span><span class="op">(</span><span class="va">block</span>, <span class="va">detergent</span><span class="op">)</span> <span class="op">%&gt;%</span></span></span>
 <span class="r-in"><span>  <span class="fu">left_join</span><span class="op">(</span><span class="va">dishwash</span>, by <span class="op">=</span> <span class="fu">join_by</span><span class="op">(</span><span class="va">block</span>, <span class="va">detergent</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in dishwash %&gt;% expand(block, detergent) %&gt;% left_join(dishwash,     by = join_by(block, detergent)):</span> could not find function "%&gt;%"</span>
 <span class="r-in"><span></span></span>
