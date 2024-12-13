@@ -6,9 +6,10 @@
 #' Musa et al. recommend fitting a nonhomogenous Poisson process with linearly
 #' exponentially decreasing failure time.
 #'
-#' @format A data frame with X rows and X columns:
+#' @format A data frame with 136 rows and 2 columns:
 #' \describe{
 #'   \item{time}{Time to failure in CPU seconds}
+#'   \item{failure_id}{Failure number (1 to 136)}
 #' }
 #'
 #' @example inst/examples/software.R

@@ -1,9 +1,3 @@
-# Load necessary libraries
-library(hsds)
-
-# Load the software dataset
-data("software")
-
 # Distribution of the failure time
 with(
   software,
