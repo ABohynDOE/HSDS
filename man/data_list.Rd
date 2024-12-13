@@ -4,10 +4,13 @@
 \alias{data_list}
 \title{Data processing status}
 \usage{
-data_list(print = 5)
+data_list(print = 5, print_done = FALSE)
 }
 \arguments{
 \item{print}{Number of unprocessed data sets to print (default is 5)}
+
+\item{print_done}{Print the names of the data sets already processed (default
+is FALSE)}
 }
 \description{
 List the data sets already processed in the package.

@@ -3,10 +3,10 @@ library(dplyr)
 library(forcats)
 
 germin <- readr::read_delim(
-  file = here::here("data-raw", "data-files", "germin.dat"),
+  file = fs::path("data-raw/data-files", "germin", ext = "dat"),
   col_names = paste0("water_", 1:6),
   col_types = rep("i", 6)
-) %>%
+) |>
   mutate(
     # Turn missing value into NA
     water_5 = water_5 %>% str_remove_all("\\*") %>% as.numeric(),
@@ -14,7 +14,7 @@ germin <- readr::read_delim(
     box = ifelse(row_number() <= 4, "Covered", "Uncovered") %>%
       as_factor()
   ) %>%
-  # Tidy data
+  # One column per variable (tidy data format)
   tidyr::pivot_longer(
     cols = -box,
     names_to = "water",

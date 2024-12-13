@@ -5,9 +5,10 @@
 \alias{software}
 \title{Software system failures}
 \format{
-A data frame with X rows and X columns:
+A data frame with 136 rows and 2 columns:
 \describe{
 \item{time}{Time to failure in CPU seconds}
+\item{failure_id}{Failure number (1 to 136)}
 }
 }
 \source{
@@ -24,12 +25,6 @@ Musa et al. recommend fitting a nonhomogenous Poisson process with linearly
 exponentially decreasing failure time.
 }
 \examples{
-# Load necessary libraries
-library(hsds)
-
-# Load the software dataset
-data("software")
-
 # Distribution of the failure time
 with(
   software,

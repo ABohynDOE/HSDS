@@ -5,23 +5,24 @@ lengths <- readr::read_delim(
   delim = "\t",
   col_names = FALSE,
   col_types = "i"
-) %>%
+) |>
   mutate(
     # Length units
     unit = ifelse(row_number() <= 3, "metres", "feet")
-  ) %>%
+  ) |>
   # Stack all values
   tidyr::pivot_longer(
     cols = -unit,
     names_to = NULL,
     values_to = "guessed_length"
-  ) %>%
+  ) |>
   # Remove empty guesses
-  filter(!is.na(guessed_length)) %>%
+  filter(!is.na(guessed_length)) |>
   # Add true length
   mutate(
-    true_length = ifelse(unit == "metres", 13.1, 43)
-  ) %>%
+    true_length = ifelse(unit == "metres", 13.1, 43),
+    unit = as.factor(unit)
+  ) |>
   labelled::set_variable_labels(
     unit = "Measurement unit",
     guessed_length = "Guessed length",
