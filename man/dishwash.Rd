@@ -7,14 +7,14 @@
 \format{
 A data frame with 36 rows and 3 columns:
 \describe{
-  \item{block}{Washing up session. Factor with levels '1' to '12'}
-  \item{detergent}{Detergent brand. Factor with levels '1' to '9'}
-  \item{plates}{Number of plates washed until the foam disappeared}
+\item{block}{Washing up session. Factor with levels '1' to '12'}
+\item{detergent}{Detergent brand. Factor with levels '1' to '9'}
+\item{plates}{Number of plates washed until the foam disappeared}
 }
 }
 \source{
 {John, P.W.M. (1961) \emph{An application of a balanced incomplete
-  block design}, Technometrics, 3, 51-54.}
+block design}, Technometrics, 3, 51-54.}
 }
 \usage{
 dishwash

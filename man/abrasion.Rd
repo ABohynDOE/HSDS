@@ -7,18 +7,18 @@
 \format{
 A data frame with 30 rows and 3 columns:
 \describe{
-  \item{abrasion_loss}{Loss of rubber over a fixed period of time (in grams
-  per hour)}
-  \item{hardness}{Hardness of the rubber in degrees Shore (the larger the
-  number, the harder the rubber)}
-  \item{tensile_strength}{Tensile strength of the rubber (in kg per squared
-  centimetres)}
+\item{abrasion_loss}{Loss of rubber over a fixed period of time (in grams
+per hour)}
+\item{hardness}{Hardness of the rubber in degrees Shore (the larger the
+number, the harder the rubber)}
+\item{tensile_strength}{Tensile strength of the rubber (in kg per squared
+centimetres)}
 }
 }
 \source{
 {Davies, O.L. and Goldsmith, P.L. (eds.) (1972) \emph{Statistical
-  Methods in Research and Production}, 4th Edition, Edinburgh: Oliverand
-  Boyd, 239.}
+Methods in Research and Production}, 4th Edition, Edinburgh: Oliverand
+Boyd, 239.}
 }
 \usage{
 abrasion

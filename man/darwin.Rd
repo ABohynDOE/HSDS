@@ -7,14 +7,14 @@
 \format{
 A data frame with 30 rows and 3 columns:
 \describe{
-  \item{pair}{Unique ID for the seedling pair}
-  \item{fertilization}{Type of fertilization (`cross` of `self`)}
-  \item{height}{Height of the plant in inches}
+\item{pair}{Unique ID for the seedling pair}
+\item{fertilization}{Type of fertilization (\code{cross} of \code{self})}
+\item{height}{Height of the plant in inches}
 }
 }
 \source{
 {Darwin, C. (1876) \emph{The Effect of Cross- and Self-fertilization
-  in the Vegetable Kingdom}, 2nd edition, London: John Murray.}
+in the Vegetable Kingdom}, 2nd edition, London: John Murray.}
 }
 \usage{
 darwin

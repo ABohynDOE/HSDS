@@ -7,16 +7,16 @@
 \format{
 A data frame with 32 rows and 5 columns:
 \describe{
-  \item{block}{Experimental block}
-  \item{unit}{Production unit}
-  \item{amount}{Ammonium chloride amount, `low` or `high`}
-  \item{quality}{Ammonium chloride quality, `low` or `high`}
-  \item{yield}{Process yield in pounds}
+\item{block}{Experimental block}
+\item{unit}{Production unit}
+\item{amount}{Ammonium chloride amount, \code{low} or \code{high}}
+\item{quality}{Ammonium chloride quality, \code{low} or \code{high}}
+\item{yield}{Process yield in pounds}
 }
 }
 \source{
 {Davies, O.L. (ed.) (1956) \emph{The Design and Analysis of
-  Industrial Experiments}, 2nd Edition, London: Longman, 375.}
+Industrial Experiments}, 2nd Edition, London: Longman, 375.}
 }
 \usage{
 chloride
@@ -28,7 +28,7 @@ a process which used ammonium chloride.
 \details{
 The main interest lay in the comparison between the use of finely ground and
 coarse ammonium chloride; the fine grade cost more. The experimenters were
-also interested in the effect of adding an extra 10% of ammonium chloride
+also interested in the effect of adding an extra 10\% of ammonium chloride
 above the usual amount. There were two production units at the plant, and it
 was thought that the unit used would have an effect on yield, but that
 interactions between the unit and the two factors involving ammonium chloride

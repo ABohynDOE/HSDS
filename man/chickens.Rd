@@ -7,16 +7,16 @@
 \format{
 A data frame with 24 rows and 3 columns:
 \describe{
-  \item{block}{Block corresponding to a bird house}
-  \item{dose}{Dose of drug added to the diet (`control`, `low` or `high`)}
-  \item{weight}{Average weight per bird (in pounds) at maturity for the group
-  of birds in each experimental unit}
+\item{block}{Block corresponding to a bird house}
+\item{dose}{Dose of drug added to the diet (\code{control}, \code{low} or \code{high})}
+\item{weight}{Average weight per bird (in pounds) at maturity for the group
+of birds in each experimental unit}
 }
 }
 \source{
 {Snee, R.D. (1985) \emph{Graphical display of results of
-  three-treatment randomized block experiments}. Applied Statistics, 34,
-  71-7.}
+three-treatment randomized block experiments}. Applied Statistics, 34,
+71-7.}
 }
 \usage{
 chickens

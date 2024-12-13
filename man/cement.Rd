@@ -7,13 +7,13 @@
 \format{
 A data frame with 21 rows and 2 columns:
 \describe{
-  \item{time}{Curing time in days}
-  \item{strength}{Tensile strength (kg/cm2)}
+\item{time}{Curing time in days}
+\item{strength}{Tensile strength (kg/cm2)}
 }
 }
 \source{
 {Hald, A. (1952) \emph{Statistical Theory with Engineering
-  Applications}, New York: John Wiley & Sons, 451.}
+Applications}, New York: John Wiley & Sons, 451.}
 }
 \usage{
 cement

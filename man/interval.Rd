@@ -7,8 +7,8 @@
 \format{
 A data frame with 48 rows and 3 columns:
 \describe{
-  \item{car}{Unique ID to define the cars}
-  \item{time}{Time at which the car passed the junction. Encoded as a string in the 'HH:MM:SS' format}
+\item{car}{Unique ID to define the cars}
+\item{time}{Time at which the car passed the junction. Encoded as a string in the 'HH:MM:SS' format}
 }
 }
 \source{

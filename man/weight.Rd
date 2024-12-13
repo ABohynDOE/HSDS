@@ -7,14 +7,14 @@
 \format{
 A data frame with 30 rows and 3 columns:
 \describe{
-  \item{weight}{Weight gain in grams}
-  \item{source}{Protein source (`beef` or `cereal`)}
-  \item{amount}{Protein amount (`low` or `high`)}
+\item{weight}{Weight gain in grams}
+\item{source}{Protein source (\code{beef} or \code{cereal})}
+\item{amount}{Protein amount (\code{low} or \code{high})}
 }
 }
 \source{
 {Snedecor, G.W. and Cochran, G.C. (1967) \emph{Statistical Methods},
-  6th edition, Ames, Iowa: Iowa State University Press, 347.}
+6th edition, Ames, Iowa: Iowa State University Press, 347.}
 }
 \usage{
 weight

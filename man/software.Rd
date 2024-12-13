@@ -7,7 +7,7 @@
 \format{
 A data frame with X rows and X columns:
 \describe{
-  \item{time}{Time to failure in CPU seconds}
+\item{time}{Time to failure in CPU seconds}
 }
 }
 \source{

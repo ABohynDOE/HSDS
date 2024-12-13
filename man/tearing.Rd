@@ -7,8 +7,8 @@
 \format{
 A data frame with 20 rows and 2 columns:
 \describe{
-  \item{pressure}{Pressure applied during pressing}
-  \item{tear_factor}{Tear factor}
+\item{pressure}{Pressure applied during pressing}
+\item{tear_factor}{Tear factor}
 }
 }
 \source{

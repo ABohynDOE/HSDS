@@ -7,9 +7,9 @@
 \format{
 A data frame with X rows and X columns:
 \describe{
-  \item{comp_id}{Compressor ID (1 to 4)}
-  \item{leg}{Compressor leg (North, Center, South)}
-  \item{n_failures}{Number of failures observed)}
+\item{comp_id}{Compressor ID (1 to 4)}
+\item{leg}{Compressor leg (North, Center, South)}
+\item{n_failures}{Number of failures observed)}
 }
 }
 \source{

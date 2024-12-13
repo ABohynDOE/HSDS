@@ -7,9 +7,9 @@
 \format{
 A data frame with 48 rows and 3 columns:
 \describe{
-  \item{box}{Type of box used}
-  \item{water}{Water level in the box, with higher codes corresponding to more water}
-  \item{seeds}{Number of germinated seeds, out of 100}
+\item{box}{Type of box used}
+\item{water}{Water level in the box, with higher codes corresponding to more water}
+\item{seeds}{Number of germinated seeds, out of 100}
 }
 }
 \source{

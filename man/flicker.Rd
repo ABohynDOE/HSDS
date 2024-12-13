@@ -7,16 +7,16 @@
 \format{
 A data frame with 27 rows and 4 columns:
 \describe{
-  \item{subject}{subject ID}
-  \item{day}{Day of the experiment}
-  \item{frequency}{Flicker frequency}
-  \item{treatment}{Anti-histaminic treatment given, one of `meclastine`, `placebo`, or `promethazine`}
+\item{subject}{subject ID}
+\item{day}{Day of the experiment}
+\item{frequency}{Flicker frequency}
+\item{treatment}{Anti-histaminic treatment given, one of \code{meclastine}, \code{placebo}, or \code{promethazine}}
 }
 }
 \source{
 {Hedges, A., Hills, M., Maclay, W.P., Newman-Taylor, A.J. and Turner,
-  P. (1971) \emph{Some central and peripheral effects of meclastine, a new
-  antihistaminic drug}, in man. Journal of Clinical Pharmacology, 2, 112-119}
+P. (1971) \emph{Some central and peripheral effects of meclastine, a new
+antihistaminic drug}, in man. Journal of Clinical Pharmacology, 2, 112-119}
 }
 \usage{
 flicker
