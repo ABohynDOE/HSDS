@@ -7,7 +7,10 @@ raw_data_index <- readr::read_delim(
   delim = ";",
   show_col_types = FALSE,
   col_names = TRUE
-)
+) |>
+  dplyr::mutate(
+    name = stringr::str_remove(file_name, ".DAT") |> stringr::str_to_lower()
+  )
 
 # List the processed files
 processed_files <- fs::dir_ls(here::here("data")) |>
@@ -16,8 +19,6 @@ processed_files <- fs::dir_ls(here::here("data")) |>
 
 # Filter only the processed files in the data index
 data_index_base <- raw_data_index |>
-  dplyr::mutate(name = stringr::str_remove(file_name, ".DAT") |>
-           stringr::str_to_lower()) |>
   dplyr::filter(name %in% processed_files) |>
   dplyr::select(num = index, name, description)
 
@@ -26,30 +27,25 @@ data_index_base <- raw_data_index |>
 compute_info <- function(filename) {
   load(here::here("data", paste0(filename, ".rda")))
   data <- get(ls()[ls() == filename])
-  col_counts <- purrr::map_chr(colnames(data), ~class(data[[.x]])) |>
+  col_counts <- purrr::map_chr(colnames(data), ~ class(data[[.x]])) |>
     table()
   col_types <- stringr::str_glue("{names(col_counts)} ({unname(col_counts)})") |>
     stringr::str_c(collapse = ", ")
   dim_data <- dim(data)
-  list(
-    "size" = sprintf("%i × %i", dim_data[1], dim_data[2]),
-    "col_types" = col_types
-  )
+  list("size" = sprintf("%i × %i", dim_data[1], dim_data[2]),
+       "col_types" = col_types)
 }
 
 # Update the data index with the data size and the column types
 data_index <- data_index_base |>
   dplyr::mutate(
     info = purrr::map(name, compute_info),
-    size = purrr::map(info, ~.x$size),
-    col_types = purrr::map(info, ~.x$col_types)
+    size = purrr::map(info, ~ .x$size),
+    col_types = purrr::map(info, ~ .x$col_types)
   ) |>
   tidyr::unnest(cols = c(size, col_types)) |>
   dplyr::select(num, name, description, size, col_types)
 
 # Save the raw data index and the current data index to the same internal data
 # file
-save(
-  raw_data_index, data_index,
-  file = "R/sysdata.rda"
-)
+save(raw_data_index, data_index, file = "R/sysdata.rda")
