@@ -1,19 +1,24 @@
 #' Piston-ring failures
 #'
-#' Number of failures of piston-rings in each of three legs in each of four steam-driven compressors located in the same building.
-#' The compressors have identical design and are oriented in the same way.
+#' @description Number of failures of piston-rings in each
+#' of three legs in each of four steam-driven compressors located in the same
+#' building. The compressors have identical design and are oriented in the same
+#' way.
 #'
-#' Questions of interest are whether the probability of failure varies between compressors or between different legs, and whether the pattern of the location of failures is different for different compressors.
-#' Davies and Goldsmith investigate these questions using chi-squared tests; log-linear analysis might be an alternative.
+#' @details Questions of interest are whether the probability of failure varies
+#' between compressors or between different legs, and whether the pattern of the
+#' location of failures is different for different compressors. Davies and
+#' Goldsmith investigate these questions using chi-squared tests; log-linear
+#' analysis might be an alternative.
 #'
-#' @format A data frame with 12 rows and 3 columns:
+#' @format A data frame with X rows and X columns:
 #' \describe{
-#'   \item{compressor_no}{Compressor number (1 to 4)}
+#'   \item{comp_id}{Compressor ID (1 to 4)}
 #'   \item{leg}{Compressor leg (North, Center, South)}
-#'   \item{n_failures}{Number of failures}
+#'   \item{n_failures}{Number of failures observed)}
 #' }
 #'
 #' @example inst/examples/piston.R
 #'
-#' @source {Davies, O.L. and Goldsmith, P.L. (eds.) (1972) \emph{Statistical Methods in Research and Production}, 4th Edition, Edinburgh: Oliverand Boyd, 324.}
+#' @source Davies, O.L. and Goldsmith, P.L. (eds.) (1972) \emph{Statistical Methods in Research and Production}, 4th Edition, Edinburgh: Oliverand Boyd, 324.
 "piston"

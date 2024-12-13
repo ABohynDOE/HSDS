@@ -1,54 +1,55 @@
 library(dplyr, warn.conflicts = F)
 library(stringr)
 
-# Read in the data index text file
-data_index_lines <- readLines(here::here("data-raw", "data_index.txt"))
-match <- str_match(
-  data_index_lines,
-  "^(?<num>\\d+)\\.\\s(?<title>.+)\\s(?<rows>\\d+)\\s(?<cols>\\d+)\\s(?<columns>.+)\\s(?<filename>[A-Z]+)\\.DAT$"
+# Read in the data index file
+raw_data_index <- readr::read_delim(
+  file = here::here("data-raw/raw_data_index.csv"),
+  delim = ";",
+  show_col_types = FALSE,
+  col_names = TRUE
 )
 
-# Turn it into a dataframe
-data_index <- match[,2:ncol(match)] %>%
-  as.data.frame() %>%
-  mutate(
-    filename = tolower(filename),
-    num = as.numeric(num)
-  )
+# List the processed files
+processed_files <- fs::dir_ls(here::here("data")) |>
+  fs::path_file() |>
+  fs::path_ext_remove()
 
-# Function to load the data
-load_data <- function(filename){
+# Filter only the processed files in the data index
+data_index_base <- raw_data_index |>
+  dplyr::mutate(name = stringr::str_remove(file_name, ".DAT") |>
+           stringr::str_to_lower()) |>
+  dplyr::filter(name %in% processed_files) |>
+  dplyr::select(num = index, name, description)
+
+# Function to find the size of the a processed data set and the type of all the
+# columns in the data set
+compute_info <- function(filename) {
   load(here::here("data", paste0(filename, ".rda")))
-  get(ls()[ls() == filename])
-}
-
-# Function to define the structure of a data set
-data_structure <- function(data){
-  columns <- sapply(colnames(data), function(x) class(data[[x]])) %>%
+  data <- get(ls()[ls() == filename])
+  col_counts <- purrr::map_chr(colnames(data), ~class(data[[.x]])) |>
     table()
-  structure <- paste(glue::glue("{names(columns)}({columns})"), collapse = ", ")
-  structure
+  col_types <- stringr::str_glue("{names(col_counts)} ({unname(col_counts)})") |>
+    stringr::str_c(collapse = ", ")
+  dim_data <- dim(data)
+  list(
+    "size" = sprintf("%i × %i", dim_data[1], dim_data[2]),
+    "col_types" = col_types
+  )
 }
 
-# Function to retrieve the size of a data set
-data_size <- function(data){
-  dims <- dim(data)
-  sprintf("%i × %i", dims[1], dims[2])
-}
+# Update the data index with the data size and the column types
+data_index <- data_index_base |>
+  dplyr::mutate(
+    info = purrr::map(name, compute_info),
+    size = purrr::map(info, ~.x$size),
+    col_types = purrr::map(info, ~.x$col_types)
+  ) |>
+  tidyr::unnest(cols = c(size, col_types)) |>
+  dplyr::select(num, name, description, size, col_types)
 
-# Select only the currently available data sets
-current_data_index <- data_index %>%
-  mutate(
-    present = fs::file_exists(here::here("data", paste0(filename, ".rda")))
-  ) %>%
-  filter(present == TRUE) %>%
-  mutate(
-    data = purrr::map(filename, load_data),
-    structure = purrr::map_chr(data, data_structure),
-    size = purrr::map_chr(data, data_size),
-  ) %>%
-  select(-data) %>%
-  tidyr::unnest(c(structure, size))
-
-usethis::use_data(data_index, current_data_index, overwrite = TRUE,
-                  internal = TRUE)
+# Save the raw data index and the current data index to the same internal data
+# file
+save(
+  raw_data_index, data_index,
+  file = "R/sysdata.rda"
+)
